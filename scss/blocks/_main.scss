@@ -1,0 +1,99 @@
+.main {
+  padding: 120px 0 0 0;
+}
+
+.main__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__content {
+  max-width: 500px;
+  width: 100%;
+}
+
+.main__rent {
+  margin: 30px 0 0 0;
+}
+
+.main__price {
+  display: flex;
+  align-items: center;
+  margin: 24px 0 0 0;
+}
+
+.main__price-all {
+  font-size: 56px;
+  font-weight: 700;
+  color: $accent;
+}
+
+.main__price__correction {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 24px;
+}
+
+.main__price-day {
+  font-weight: 600;
+}
+
+.main__price-deposit {
+  color: $second;
+}
+
+.main-btn {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 18px 82px;
+  margin: 20px 0 0 0;
+}
+
+.main__selects {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main__select-car {
+  width: 304px;
+  margin: 0 8px 0 0;
+}
+
+.main__select-day {
+  width: 72px;
+}
+
+
+.main__image {
+  position: relative;
+  margin: 0 -60px 0 0;
+}
+
+.main__image-car {
+  position: relative;
+  z-index: 1;
+}
+
+.main__image-rock {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-142px);
+}
+
+.main__image-traced-back {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-34%,-74px);
+}
+
+.main__image-traced-front {
+  position: absolute;
+  bottom: 40px;
+  left: -110px;
+  transform: translate(0);
+  z-index: 1;
+}

@@ -1,0 +1,153 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  pointer-events: none;
+  transition: $transition;
+
+  &._show {
+    background: rgba(46, 139, 248, 0.85);
+    pointer-events: all;
+
+    & .modal__body {
+      transform: translate(0); 
+    }
+  }
+}
+
+.modal__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+  transform: translate(0,-100%);
+  transition: $transition;
+
+  @media screen and (max-width: 600px) {
+    padding: 0;
+  }
+}
+
+.modal__content {
+  max-width: 600px;
+  width: 100%;
+  // padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+
+  @media screen and (max-width: 600px) {
+    border-radius: 0;
+  }
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 24px 0;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modal-close {
+  width: 24px;
+  height: 24px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    width: 18px;
+    height: 2px;
+    background: $main;
+    opacity: .3;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    width: 18px;
+    height: 2px;
+    background: $main;
+    opacity: .3;
+  }
+}
+
+// Стили для модального окна "Контакты"
+.modal-contact {
+  padding: 16px 0;
+}
+
+.modal-contact-link {
+  display: flex;
+  padding: 16px 24px;
+  transition: $transition;
+  
+  @media screen and (min-width: $minHover) {
+    &:hover {
+      background: #f3f5f7;
+    }
+  }
+  &:active {
+    background: #f3f5f7;
+  }
+}
+
+.modal-contact-img {
+  width: 24px;
+  height: 24px;
+  margin: 0 16px 0 0;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.modal-contact-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-contact-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.modal-contact-label {
+  font-size: 12px;
+  font-weight: 400;
+  color: $second;
+}
+
+.modal-btn-phone {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .info__callback-img {
+    width: 24px;
+    height: 24px;
+  }
+
+  & .info__callback-text {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}

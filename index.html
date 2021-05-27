@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__body">
+          <div class="info">
+            <div class="info__body">
+              <div class="info__item">
+                <div class="info__item-img">
+                  <img src="img/work-time.svg" alt="Рабочее время">
+                </div>
+                <span class="info__item-text">Режим работы 9.00 - 19.00</span>
+              </div>
+              <div class="info__item">
+                <div class="info__item-img">
+                  <img src="img/car-availability.svg" alt="Доступность авто">
+                </div>
+                <span class="info__item-text">Подача автомобиля 24/7 </span>
+              </div>
+              <div class="info__contacts">
+                <ul class="info__messengers">
+                  <li><a href="#"><img src="img/viber.svg" alt="Viber"></a></li>
+                  <li><a href="#"><img src="img/whatsapp.svg" alt="WhatsApp"></a></li>
+                  <li><a href="#"><img src="img/telegram.svg" alt="Telegram"></a></li>
+                </ul>
+                <a href="tel:+79788373757" class="info-phone">+7 (978) 837-37-57</a>
+              </div>
+              <button class="btn-outline btn-round info__callback">
+                <div class="info__callback-img">
+                  <img src="img/callback.svg" alt="Обратный звонок">
+                </div>
+                <span class="info__callback-text">Обратный звонок</span>
+              </button>
+            </div>
+          </div>
+          <nav class="nav">
+            <div class="nav__body">
+              <button class="nav-burger"><span></span></button>
+              <a href="#" class="nav__logo">
+                <div class="nav__logo-img">
+                  <img src="img/logo.svg" alt="Логотип">
+                </div>
+                <div class="nav__logo__text">
+                  <span class="nav__logo-title">Гранд Авто</span>
+                  <div class="nav__logo-label">Аренда авто в Севастополе</div>
+                </div>
+              </a>
+              <div class="nav-menu">
+                <div class="nav-menu__body">
+                  <div class="nav-menu__header">
+                    <h3 class="nav-menu-title">Меню</h3>
+                    <button class="nav-menu-close"></button>
+                  </div>
+                  <ul class="nav-menu__list">
+                    <li><a href="#" class="_active-page">Главная</a></li>
+                    <li><a href="#">Автопарк</a></li>
+                    <li><a href="#">Цены</a></li>
+                    <li><a href="#">Условия</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                  <div class="nav-menu__footer">
+                    <div class="info__items">
+                      <div class="info__item">
+                        <div class="info__item-img">
+                          <img src="img/work-time.svg" alt="Рабочее время">
+                        </div>
+                        <span class="info__item-text">Режим работы 9.00 - 19.00</span>
+                      </div>
+                      <div class="info__item">
+                        <div class="info__item-img">
+                          <img src="img/car-availability.svg" alt="Доступность авто">
+                        </div>
+                        <span class="info__item-text">Подача автомобиля 24/7 </span>
+                      </div>
+                    </div>
+                    <button class="btn-outline btn-round nav-menu-callback">
+                      <div class="info__callback-img">
+                        <img src="img/callback.svg" alt="Обратный звонок">
+                      </div>
+                      <span class="info__callback-text">Обратный звонок</span>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+              <button class="modal-open nav-contacts" data-modal-open="contacts"><img src="img/phone.svg" alt="Связь"></button> 
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="main__body">
+          <div class="main__content">
+            <h1 class="main-title">Аренда автомобилей в Севастополе</h1>
+            <div class="main__rent">
+              <form action="#" method="POST" class="main__select">
+                <div class="main__selects">
+                  <div class="select main__select main__select-car">
+                    <div class="select__header">
+                      <span class="select-current">VW TIGUAN 2.0 4x4</span>
+                      <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
+                      <div class="select-label"><span class="select-label-text">Авто</span></div>
+                    </div>
+                    <ul class="select__body">
+                      <li class="select-item">VW TIGUAN 2.0 4x4</li>
+                      <li class="select-item">Skoda Octavia</li>
+                      <li class="select-item">Hyundai Genesis 70</li>
+                      <li class="select-item">Kia Optima 1.6 МКПП</li>
+                      <li class="select-item">Nissan Murano</li>
+                    </ul>
+                  </div>
+                  <div class="select main__select main__select-day">
+                    <div class="select__header">
+                      <span class="select-current">1</span>
+                      <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
+                      <div class="select-label"><span class="select-label-text">Сутки</span></div>
+                    </div>
+                    <ul class="select__body">
+                      <li class="select-item">1</li>
+                      <li class="select-item">2</li>
+                      <li class="select-item">3</li>
+                      <li class="select-item">4</li>
+                      <li class="select-item">5</li>
+                    </ul>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="main__price">
+              <span class="main__price-all">17 500 ₽</span>
+              <div class="main__price__correction">
+                <span class="main__price-day">3 500 ₽ / сутки</span>
+                <span class="main__price-deposit">Залог: 20 000 ₽ </span>
+              </div>
+            </div>
+            <button class="btn btn-round main-btn">Арендовать</button>
+          </div>
+          <div class="main__image">
+            <div class="main__image-car"><img src="img/main-car.png" alt="Автомобиль"></div>
+            <div class="main__image-rock"><img src="img/main-rock.svg" alt="Горы"></div>
+            <div class="main__image-traced-front"><img src="img/main-traced-front.svg" alt=""></div>
+            <div class="main__image-traced-back"><img src="img/main-traced-back.svg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Модальные окна -->
+    <div class="modal modal-contacts" data-modal="contacts">
+      <div class="modal__body">
+        <div class="modal__content">
+          <div class="modal__header">
+            <h3 class="modal-title">Контакты</h3>
+            <button class="modal-close"></button> 
+          </div>
+          <div class="modal-contact">
+            <ul class="modal-contact__list">
+              <li class="modal-contact__item">
+                <a href="#" class="modal-contact-link">
+                  <div class="modal-contact-img"><img src="img/phone.svg" alt="Телефон"></div>
+                  <div class="modal-contact-text">
+                    <span class="modal-contact-title">+7 (978) 837-37-57</span>
+                    <span class="modal-contact-label">Ежедневно с 9.00 до 19.00</span>
+                  </div>
+                </a>
+              </li>
+              <li class="modal-contact__item">
+                <a href="#" class="modal-contact-link">
+                  <div class="modal-contact-img"><img src="img/viber.svg" alt="Viber"></div>
+                  <div class="modal-contact-text">
+                    <span class="modal-contact-title">Viber</span>
+                    <span class="modal-contact-label">Онлайн-консультант</span>
+                  </div>
+                </a>
+              </li>
+              <li class="modal-contact__item">
+                <a href="#" class="modal-contact-link">
+                  <div class="modal-contact-img"><img src="img/whatsapp.svg" alt="Whatsapp"></div>
+                  <div class="modal-contact-text">
+                    <span class="modal-contact-title">Whatsapp</span>
+                    <span class="modal-contact-label">Отправить сообщение</span>
+                  </div>
+                </a>
+              </li>
+              <li class="modal-contact__item">
+                <a href="#" class="modal-contact-link">
+                  <div class="modal-contact-img"><img src="img/telegram.svg" alt="Telegram"></div>
+                  <div class="modal-contact-text">
+                    <span class="modal-contact-title">Telegram</span>
+                    <span class="modal-contact-label">Отправить сообщение</span>
+                  </div>
+                </a>
+              </li>
+              <li class="modal-contact__item">
+                <a href="#" class="modal-contact-link">
+                  <div class="modal-contact-img"><img src="img/callback.svg" alt="Обратный звонок"></div>
+                  <div class="modal-contact-text">
+                    <span class="modal-contact-title">Обратный звонок</span>
+                    <span class="modal-contact-label">Мы перезвоним вам</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-menu__footer">
+            <div class="info__items">
+              <div class="info__item">
+                <div class="info__item-img">
+                  <img src="img/work-time.svg" alt="Рабочее время">
+                </div>
+                <span class="info__item-text">Режим работы 9.00 - 19.00</span>
+              </div>
+              <div class="info__item">
+                <div class="info__item-img">
+                  <img src="img/car-availability.svg" alt="Доступность авто">
+                </div>
+                <span class="info__item-text">Подача автомобиля 24/7 </span>
+              </div>
+            </div>
+            <button class="btn btn-round modal-btn-phone">
+              <div class="info__callback-img">
+                <img src="img/phone.svg" alt="Позвонить">
+              </div>
+              <span class="info__callback-text">Позвонить</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="callback">
+      <div class="modal__body">
+        <div class="modal__content">
+          <div class="modal__header">
+            <h3 class="modal-title">Обратный звонок</h3>
+            <button class="modal-close"></button> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

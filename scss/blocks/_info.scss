@@ -1,0 +1,86 @@
+.info {
+  padding: 24px 0;
+
+  @media screen and (max-width: 1020px) {
+    display: none;
+  }
+}
+
+.info__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info__item {
+  display: flex;
+  align-items: center;
+}
+
+.info__item-img {
+  width: 24px;
+  height: 24px;
+  margin: 0 12px 0 0;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.info__item-text {
+  font-size: 14px;
+  color: $second;
+}
+
+.info__contacts {
+  display: flex;
+  align-items: center;
+}
+
+.info__messengers {
+  display: flex;
+  align-items: center;
+  margin: 0 18px 0 0;
+
+  & li:not(:last-child) {
+    margin: 0 12px 0 0;
+  }
+
+  & li a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.info-phone {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.info__callback {
+  display: flex;
+  align-items: center;
+  padding: 11px 22px;
+}
+
+.info__callback-img {
+  width: 18px;
+  height: 18px;
+  margin: 0 16px 0 0;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.info__callback-text {
+  font-weight: 400;
+}

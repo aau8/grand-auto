@@ -1,0 +1,184 @@
+//<ШРИФТЫ>===============================================================================================================================================================
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,600,700);
+
+$fontFamily: "Montserrat";
+//</ШРИФТЫ>==============================================================================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===============================================================================================================================================================
+$minHover: 768px; // если хочешь убрать hover на телефонах, укажи - 768px
+$maxWidthContainer: 1216; // max-width
+$paddingContainer: 24; // padding по бокам
+$transition: .2s;
+
+
+:root {
+  --main: #2C3B45;
+  --second: #68757D;
+  --third: #8B9092;
+  --outline: #DFEAEF;
+  --accent: #2E8BF8;
+  --accent-second: #FFEB79;
+  --bg: #F5FCFF;
+}
+
+$main: var(--main);
+$second: var(--second);
+$third: var(--third);
+$outline: var(--outline);
+$accent: var(--accent);
+$accent-second: var(--accent-second);
+$bg: var(--bg);
+
+//</ПЕРЕМЕННЫЕ>==============================================================================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================================================================================
+@import '_reset';
+
+* {
+  font-family: $fontFamily, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; // делает плавные переходы по якорям
+}
+
+body {
+  color: $main;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  background: $bg;
+
+  &._lock {
+    overflow: hidden;
+  }
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: $main;
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>==============================================================================================================================================================
+
+//<ОБОЛОЧКА>===============================================================================================================================================================
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex; 
+  flex-direction: column; 
+  // padding: 40px 0 0 0;
+  position: relative;
+}
+//</ОБОЛОЧКА>==============================================================================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===============================================================================================================================================================
+
+.container {
+  max-width: $maxWidthContainer + $paddingContainer * 2 + px;
+  margin: 0 auto;
+  padding: 0 $paddingContainer + px;
+}
+
+//<ОБЩИЕ СТИЛИ>==================================================================================
+section {
+  // padding: 50px 0;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: $main;
+  padding: 16px 32px;
+  border-radius: 8px;
+  background: $accent-second;
+  // text-align: center;
+  transition: $transition;
+
+  // @media screen and (max-width: 1120px) {
+  //   font-size: 14px;
+  //   padding: 16px 32px;
+  // }
+
+  @media screen and (min-width: $minHover) {
+    &:hover {
+      // transform: translate(0,-4px);
+    }
+  }
+}
+
+.btn-outline {
+  font-size: 14px;
+  font-weight: 700;
+  color: $main;
+  padding: 12px 28px;
+  border: 2px solid $accent-second;
+  border-radius: 8px;
+  transition: .2s;
+
+  @media screen and (min-width: $minHover) {
+    &:hover {
+      transform: translate(0,-4px);
+    }
+  }
+
+  &:active {
+    background: linear-gradient(96.71deg, #FFCC70 1.86%, #FFA142 118.91%);
+  }
+} 
+
+.btn-round {
+  border-radius: 50px;
+}
+
+.arrow-up {
+  display: inline-block;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background: rgba(255,255,255,.3);
+  border: 1px solid rgb(15, 124, 255);
+  border-radius: 4px;
+  transform: scale(.9);
+  visibility: hidden;
+  opacity: 0;
+  transition: .2s;
+  z-index: 100;
+  &._show {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media screen and (min-width: $minHover) {
+    &:hover {
+      transform: translate(0,-4px);
+    }
+  }
+
+  &:active {
+    background: rgba(15, 124, 255,.2);
+  }
+}
+
+@import 'blocks/_header';
+@import 'blocks/_main';
+@import 'blocks/_modal';
+@import 'blocks/_select';
