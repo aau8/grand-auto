@@ -89,6 +89,10 @@ a {
   max-width: $maxWidthContainer + $paddingContainer * 2 + px;
   margin: 0 auto;
   padding: 0 $paddingContainer + px;
+
+  @media screen and (max-width: 600px) {
+    padding: 0 16px;
+  }
 }
 
 //<ОБЩИЕ СТИЛИ>==================================================================================
@@ -178,7 +182,10 @@ section {
   }
 }
 
+@import 'blocks/_select';
+
+//<ПОДКЛЮЧАЕМ БЛОКИ>==================================================================================
+
 @import 'blocks/_header';
 @import 'blocks/_main';
 @import 'blocks/_modal';
-@import 'blocks/_select';

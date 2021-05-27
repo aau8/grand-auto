@@ -61,6 +61,8 @@
 .nav__logo {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 
   @media screen and (max-width: 1020px) {
     flex-direction: column;
@@ -168,6 +170,7 @@
     background: none;
     pointer-events: none;
     transition: $transition;
+    z-index: 10;
 
     &._show {
       background: rgba(46, 139, 248, 0.85);

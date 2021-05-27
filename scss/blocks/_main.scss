@@ -1,20 +1,46 @@
 .main {
   padding: 120px 0 0 0;
+
+  @media screen and (max-width: 700px) {
+    padding: 110px 0 0 0;
+  }
 }
 
 .main__body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column-reverse;
+    justify-content: initial;
+  }
 }
 
 .main__content {
-  max-width: 500px;
-  width: 100%;
+  min-width: 500px;
+  width: 500px;
+
+  @media screen and (max-width: 900px) {
+    min-width: auto;
+    max-width: 500px;
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+}
+
+.main-title {
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 }
 
 .main__rent {
   margin: 30px 0 0 0;
+
+  @media screen and (max-width: 900px) {
+    margin: 0;
+  }
 }
 
 .main__price {
@@ -27,6 +53,10 @@
   font-size: 56px;
   font-weight: 700;
   color: $accent;
+
+  @media screen and (max-width: 500px) {
+    font-size: 40px;
+  }
 }
 
 .main__price__correction {
@@ -37,10 +67,18 @@
 
 .main__price-day {
   font-weight: 600;
+
+  @media screen and (max-width: 370px) {
+    font-size: 14px;
+  }
 }
 
 .main__price-deposit {
   color: $second;
+
+  @media screen and (max-width: 370px) {
+    font-size: 14px;
+  }
 }
 
 .main-btn {
@@ -48,6 +86,10 @@
   font-weight: 700;
   padding: 18px 82px;
   margin: 20px 0 0 0;
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
 }
 
 .main__selects {
@@ -59,21 +101,49 @@
 .main__select-car {
   width: 304px;
   margin: 0 8px 0 0;
+
+  @media screen and (max-width: 900px) {
+    width: 80%;
+  }
 }
 
 .main__select-day {
   width: 72px;
+
+  @media screen and (max-width: 900px) {
+    width: 20%;
+  }
 }
 
 
 .main__image {
   position: relative;
   margin: 0 -60px 0 0;
+
+  @media screen and (max-width: 900px) {
+    margin: 0;
+  }
 }
 
 .main__image-car {
   position: relative;
   z-index: 1;
+
+  @media screen and (max-width: 900px) {
+    transform: translate(70px,0);
+  }
+
+  @media screen and (max-width: 700px) {
+    & img {
+    width: 520px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    & img {
+    width: 400px;
+    }
+  }
 }
 
 .main__image-rock {
@@ -81,6 +151,10 @@
   top: 0;
   left: 50%;
   transform: translate(-50%,-142px);
+
+  @media screen and (max-width: 700px) {
+    transform: translate(-50%,-100px);
+  }
 }
 
 .main__image-traced-back {
@@ -88,6 +162,16 @@
   top: 0;
   left: 50%;
   transform: translate(-34%,-74px);
+
+  @media screen and (max-width: 900px) {
+    transform: translate(70px,0);
+  }
+
+  @media screen and (max-width: 700px) {
+    & img {
+      width: 80%;
+    }
+  }
 }
 
 .main__image-traced-front {
@@ -96,4 +180,14 @@
   left: -110px;
   transform: translate(0);
   z-index: 1;
+
+  @media screen and (max-width: 900px) {
+    transform: translate(70px,0);
+  }
+
+  @media screen and (max-width: 700px) {
+    & img {
+      width: 80%;
+    }
+  }
 }
