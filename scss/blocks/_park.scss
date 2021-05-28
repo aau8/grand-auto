@@ -1,5 +1,5 @@
 .park {
-  margin: 80px 0 0 0;
+  padding: 96px 0;
 }
 
 .park-title {
@@ -12,15 +12,16 @@
 @import '_park-class';
 @import '_park-car';
 
-.park__car-more {
+.park-more {
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 56px 0 0 0;
 }
 
-.park__car-more-link {
+.park-more-link {
+  width: 280px;
   font-size: 18px;
   font-weight: 600;
-  padding: 19px 60px;
+  text-align: center;
 }
