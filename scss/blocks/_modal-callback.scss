@@ -1,6 +1,10 @@
 .modal__form {
   margin: 24px 0 0 0;
   padding: 0 24px 32px;
+
+  @media screen and (max-width: 490px) {
+    padding: 0 16px 32px;
+  }
 }
 
 .modal-callback__inputs {
@@ -12,6 +16,10 @@
     top: 0;
     transform: translate(0,-50%);
   }
+
+  @media screen and (max-width: 490px) {
+    flex-direction: column;
+  }
 }
 
 .modal__input {
@@ -20,6 +28,10 @@
 
   &:nth-child(1) {
     margin: 0 32px 0 0;
+
+    @media screen and (max-width: 490px) {
+      margin: 0 0 16px 0;
+    }
   }
 
   & input {
@@ -47,9 +59,18 @@
   }
 
   & label a {
+    display: inline-block;
     position: relative;
     color: $accent;
     z-index: 1;
+    margin: 0 0 0 4px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @media screen and (max-width: 490px) {
+      font-size: 14px;
+    }
   }
 
   & label {
@@ -63,6 +84,7 @@
   & label:before {
     content: '';
     display: inline-block;
+    min-width: 20px;
     width: 20px;
     height: 20px;
     border: 1px solid #19A955;
@@ -104,4 +126,9 @@
   font-size: 18px;
   font-weight: 600;
   margin: 24px 0 0 0;
+
+  @media screen and (max-width: 490px) {
+    max-width: none;
+    width: 100%;
+  }
 }

@@ -52,11 +52,19 @@
   align-items: center;
   justify-content: space-between;
   padding: 24px 24px 0;
+
+  @media screen and (max-width: 490px) {
+    padding: 24px 16px 0;
+  }
 }
 
 .modal-title {
   font-size: 24px;
   font-weight: 600;
+
+  @media screen and (max-width: 490px) {
+   font-size: 18px; 
+  }
 }
 
 .modal-close {
