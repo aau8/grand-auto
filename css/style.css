@@ -2241,6 +2241,11 @@ section {
   }
 }
 
+.footer__menu {
+  border-top: 1px solid var(--bg);
+  border-bottom: 1px solid var(--bg);
+}
+
 .footer__menu__body {
   display: -ms-grid;
   display: grid;
@@ -2324,7 +2329,6 @@ a.footer__column-item-text:hover {
 }
 
 .footer__more {
-  border-top: 1px solid var(--outline);
   padding: 32px 0;
 }
 
