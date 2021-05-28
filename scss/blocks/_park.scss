@@ -1,0 +1,26 @@
+.park {
+  margin: 80px 0 0 0;
+}
+
+.park-title {
+  font-size: 12px;
+  font-weight: 400;
+  color: $second;
+  margin: 0 0 12px 0;
+}
+
+@import '_park-class';
+@import '_park-car';
+
+.park__car-more {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 56px 0 0 0;
+}
+
+.park__car-more-link {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 19px 60px;
+}

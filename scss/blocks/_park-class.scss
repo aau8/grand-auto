@@ -1,0 +1,82 @@
+.park__class .container {
+  @media screen and (max-width: 1100px) {
+    padding: 0;
+  }
+}
+
+.park__class-title {
+
+  @media screen and (max-width: 1100px) {
+    padding: 0 24px;
+  }
+}
+
+.park__class__list {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-column-gap: 12px;
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  @media screen and (max-width: 1100px) {
+    padding: 0 24px;
+  }
+}
+
+.park__class__item {
+  max-width: 280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid $outline;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    border: 1px solid $accent;
+  }
+
+  &._active {
+    background: $accent-second;
+    border: 1px solid $accent-second;
+  }
+}
+
+.park__class-img  {
+  width: 100%;
+  height: 122px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  & img {
+    // width: 66%;
+    // height: 66%;
+    // object-fit: contain;
+    // object-position: center;
+  }
+}
+
+.park__class__item__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0 0 0;
+  padding: 0 52px 36px;
+}
+
+.park__class__item-title {
+  font-size: 18px;
+}
+
+.park__class-price {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 4px 0 0 0;
+}
+
+.park__class-correction {
+  font-size: 14px;
+}

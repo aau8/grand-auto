@@ -135,7 +135,8 @@ section {
 
   @media screen and (min-width: $minHover) {
     &:hover {
-      transform: translate(0,-4px);
+      // transform: translate(0,-4px);
+      background: $accent-second;
     }
   }
 
@@ -189,3 +190,4 @@ section {
 @import 'blocks/_header';
 @import 'blocks/_main';
 @import 'blocks/_modal';
+@import 'blocks/_park';

@@ -1,0 +1,193 @@
+.park__car {
+  margin: 32px 0 0 0;
+}
+
+.park__car__list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 32px;
+  row-gap: 32px;
+
+  @media screen and (max-width: 1120px) {
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+  }
+
+  @media screen and (max-width: 760px) {
+    grid-template-columns: repeat(1,1fr);
+    justify-items: center;
+  }
+}
+
+.park__car-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 384px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid $outline;
+  border-radius: 16px;
+  padding: 32px 0;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: 0px 8px 32px rgba(26, 109, 186, 0.08);
+  }
+
+  &._sale {
+
+    & .park__car-sale {
+      display: block;
+    }
+
+    & .park__car__price-old {
+      display: block;
+    }
+  }
+}
+
+.park__car__header {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.park__car__character {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin: 0 16px 0 0;
+  }
+
+  &:last-child {
+    margin: 0 auto 0 0;
+  }
+}
+
+.park__car__character-icon {
+  width: 20px;
+  height: 20px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.park__car__character-text {
+  margin: 0 0 -2px 8px;
+}
+
+.park__car-sale {
+  display: none;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  background: $accent-second;
+  margin: 0 0 0 auto;
+}
+
+.park__car-img {
+  width: 100%;
+  margin: 12px 0 0 0;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.park__car__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0 0 0;
+  padding: 0 32px;
+
+  @media screen and (max-width: 370px) {
+    padding: 0 24px;
+  }
+}
+
+.park__car-class {
+  font-size: 14px;
+  color: $third;
+}
+
+.park__car-item-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 8px 0 0 0;
+}
+
+.park__car__parameters {
+  width: 100%;
+  // display: grid;
+  // grid-template-columns: repeat(3,1fr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  margin: 16px 0 auto 0;
+}
+
+.park__car__parameter {
+  display: flex;
+  flex-direction: column;
+}
+
+.park__car__parameter-title {
+  font-size: 12px;
+  color: $third;
+}
+
+.park__car__parameter-descr {
+  font-size: 16px;
+  margin: 4px 0 0 0;
+
+  @media screen and (max-width: 370px) {
+    font-size: 14px;
+  }
+}
+
+.park__car__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 16px 0 0 0;
+}
+
+.park__car__price {
+  display: flex;
+  flex-direction: column;
+}
+
+.park__car__price-old {
+  display: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: line-through;
+  margin: 0 0 -2px 0;
+}
+
+.park__car__price-all {
+  font-size: 36px;
+  font-weight: 600;
+  color: $accent;
+
+  @media screen and (max-width: 1220px) and (min-width: 1121px), screen and (max-width: 820px) {
+    font-size: 28px;
+  }
+}
+
+.park__car__price-correction {
+  font-size: 14px;
+  color: $third;
+}
+
+.park__car-btn {
+
+  @media screen and (max-width: 1220px) and (min-width: 1121px), screen and (max-width: 820px) {
+    padding: 12px 16px;
+  }
+}
