@@ -39,7 +39,7 @@
                 </ul>
                 <a href="tel:+79788373757" class="info-phone">+7 (978) 837-37-57</a>
               </div>
-              <button class="btn-outline btn-round info__callback">
+              <button class="btn-outline btn-round info__callback modal-open" data-modal-open="callback">
                 <div class="info__callback-img">
                   <img src="img/callback.svg" alt="Обратный звонок">
                 </div>
@@ -111,10 +111,10 @@
             <div class="main__rent">
               <div class="main__selects">
                 <div class="select main__select main__select-car">
-                  <div class="select__header">
+                  <div class="input select__header">
                     <span class="select-current">VW TIGUAN 2.0 4x4</span>
                     <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
-                    <div class="select-label"><span class="select-label-text">Авто</span></div>
+                    <div class="input-label select-label"><span>Авто</span></div>
                   </div>
                   <ul class="select__body">
                     <li class="select-item">VW TIGUAN 2.0 4x4</li>
@@ -125,10 +125,10 @@
                   </ul>
                 </div>
                 <div class="select main__select main__select-day">
-                  <div class="select__header">
+                  <div class="input select__header">
                     <span class="select-current">1</span>
                     <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
-                    <div class="select-label"><span class="select-label-text">Сутки</span></div>
+                    <div class="input-label select-label"><span class="select-label-text">Сутки</span></div>
                   </div>
                   <ul class="select__body">
                     <li class="select-item">1</li>
@@ -684,7 +684,7 @@
                 </ul>
                 <a href="tel:+79788373757" class="info-phone">+7 (978) 837-37-57</a>
               </div>
-              <button class="btn-outline btn-round info__callback">
+              <button class="btn-outline btn-round info__callback modal-open" data-modal-open="callback">
                 <div class="info__callback-img">
                   <img src="img/callback.svg" alt="Обратный звонок">
                 </div>
@@ -837,12 +837,31 @@
         </div>
       </div>
     </div>
-    <div class="modal" data-modal="callback">
+    <div class="modal modal-callback" data-modal="callback">
       <div class="modal__body">
         <div class="modal__content">
           <div class="modal__header">
             <h3 class="modal-title">Обратный звонок</h3>
             <button class="modal-close"></button> 
+          </div>
+          <div class="modal__form">
+            <form action="#" method="POST">
+              <div class="modal-callback__inputs">
+                <div class="modal__input">
+                  <input name="modal-callback-name" type="text" class="input">
+                  <label for="modal-callback-name" class="input-label">Имя</label>
+                </div>
+                <div class="modal__input">
+                  <input name="modal-callback-name" type="phone" class="input">
+                  <label for="modal-callback-name" class="input-label">Номер</label>
+                </div>
+              </div>
+              <div class="modal-callback__checkbox">
+                <input name="modal-callback__checkbox-input" type="checkbox" checked>
+                <label for="modal-callback__checkbox-input">Я ознакомлен(-а) с <a href="#">Политикой конфиденциальности</a></label>
+              </div>
+              <button type="submit" class="btn btn-round modal-callback-btn">Отправить</button>
+            </form>
           </div>
         </div>
       </div>

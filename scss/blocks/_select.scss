@@ -17,7 +17,7 @@
   }
 }
 
-.select__header {
+.input {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,7 +47,7 @@
   }
 }
 
-.select-label {
+.input-label {
   position: absolute;
   top: -1px;
   left: 12px;
@@ -55,6 +55,8 @@
   color: $second;
   padding: 0 8px;
   background: #fff;
+  pointer-events: none;
+  user-select: none;
   z-index: 1;
 
   @media screen and (max-width: 420px) {
@@ -63,7 +65,7 @@
   }
 }
 
-.select-label-text {
+.input-label span {
   display: inline-block;
   transform: translate(0,-50%);
 }
