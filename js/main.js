@@ -107,3 +107,24 @@ function select() {
 }
 
 select();
+
+// reviews Swiper
+const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  loop: true,
+  slidesPerView: "auto",
+  centeredSlides: true,
+  spaceBetween: 32,
+
+  // If we need pagination
+  pagination: {
+    el: '.reviews__pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.reviews__arrows-right',
+    prevEl: '.reviews__arrows-left',
+  },
+});
