@@ -1334,6 +1334,7 @@ section {
 }
 
 .modal-contact-img {
+  min-width: 24px;
   width: 24px;
   height: 24px;
   margin: 0 16px 0 0;
@@ -2285,6 +2286,7 @@ section {
   .footer__menu__body {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+    padding: 32px 0;
   }
 }
 
@@ -2437,13 +2439,6 @@ a.footer__column-item-text:hover {
           justify-content: space-between;
 }
 
-.modal-callback__inputs .input-label {
-  top: 0;
-  -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-}
-
 @media screen and (max-width: 490px) {
   .modal-callback__inputs {
     -webkit-box-orient: vertical;
@@ -2472,7 +2467,15 @@ a.footer__column-item-text:hover {
 .modal__input input {
   width: 100%;
   height: 100%;
+  font-size: 14px;
   cursor: text;
+}
+
+.modal__input .input-label {
+  top: 0;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 .modal-callback__checkbox {
@@ -2562,6 +2565,7 @@ a.footer__column-item-text:hover {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+  pointer-events: none;
 }
 
 .modal-callback__checkbox input:not(:disabled):not(:checked):active + label::before {
