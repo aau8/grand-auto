@@ -1,0 +1,164 @@
+.footer {
+  background: #fff;
+}
+
+.footer__body .info {
+  @media screen and (max-width: 1020px) {
+    display: block;
+  }
+
+  & .info__body {
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 490px) {
+      flex-direction: column;
+
+      & .info__item:not(:last-child) {
+        margin: 0 0 4px 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    & .info__callback {
+      width: 100%;
+      margin: 24px 0 0 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    & .info__contacts {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 24px 0 0 0;
+    }
+  }
+}
+
+.footer__menu__body {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  column-gap: 8px;
+  padding: 64px 0;
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+.footer__column {
+
+  @media screen and (max-width: 900px) {
+    &:nth-child(-n+2) {
+      margin: 0 0 32px 0;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    &:not(:last-child) {
+      margin: 0 0 32px 0;
+    }
+    // &:nth-child(-n+2) {
+    //   margin: 0 0 32px 0;
+    // }
+  }
+}
+
+.footer__column-title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer__column__list {
+  margin: 18px 0 0 0;
+}
+
+.footer__column-item {
+  
+  &:not(:last-child) {
+    margin: 0 0 18px 0;
+  }
+
+  & a {
+    font-size: 16px;
+    color: $accent;
+  }
+}
+
+.footer__contacts .footer__column-item {
+  display: flex;
+}
+
+.footer__column-item-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 24px 0 0;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.footer__column-item-text {
+  color: $main!important;
+}
+
+a.footer__column-item-text {
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer__more {
+  border-top: 1px solid $outline;
+  padding: 32px 0;
+}
+
+.footer__more__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & span {
+    font-size: 12px;
+    font-weight: 400;
+    color: $third;
+  }
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    & span:not(:last-child)  {
+      margin: 0 0 8px 0;
+    }
+  }
+}
+
+.footer-copyright {
+  min-width: 200px;
+}
+
+.footer-registered {
+  text-align: center;
+
+  @media screen and (max-width: 900px) {
+    text-align: left;
+  }
+}
+
+.footer-work-time {
+  text-align: right;
+
+  @media screen and (max-width: 900px) {
+    text-align: left;
+  }
+}
