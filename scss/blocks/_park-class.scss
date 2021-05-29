@@ -31,16 +31,39 @@
   align-items: flex-start;
   border: 1px solid $outline;
   border-radius: 16px;
+  overflow: hidden;
   cursor: pointer;
   transition: $transition;
 
+  & img {
+    transform: scale(.9);
+    transition: .3s;
+  }
+
   &:hover {
+    // background: rgba(46, 139, 248, 0.05);
     border: 1px solid $accent;
   }
 
   &._active {
-    background: $accent-second;
-    border: 1px solid $accent-second;
+    background: rgba(46, 139, 248, 0.05);
+    // background: $accent-second;
+    border: 1px solid $accent;
+    
+    & img {
+      transform: scale(1);
+      // animation: parkImgAnim .5s ease-out forwards;
+      // // transition: .3s;
+
+      // @keyframes parkImgAnim {
+      //   from {
+      //     transform: translate(-270px,0);
+      //   }
+      //   to {
+      //     transform: translate(0);
+      //   }
+      // }
+    }
   }
 }
 
@@ -50,13 +73,6 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-
-  & img {
-    // width: 66%;
-    // height: 66%;
-    // object-fit: contain;
-    // object-position: center;
-  }
 }
 
 .park__class__item__content {

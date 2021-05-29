@@ -175,3 +175,53 @@ rentalModalClose.addEventListener('click', (e) => {
   rentalModalClose.closest('.modal-condition').classList.remove('_show');
   body.classList.remove('_lock');
 });
+
+// Фильтр для парка авто на главной
+
+const parkClass = document.querySelectorAll('.park__class__item');
+
+parkClass.forEach(item => {
+  item.addEventListener('click', () => {
+    parkClass.forEach(e => {
+      e.classList.remove('_active');
+    });
+    item.classList.add('_active');
+
+    parkFilter(item);
+  })
+});
+
+function parkFilter(parkClass) {
+  const parkClassData = parkClass.dataset.parkClass,
+        parkCarAll = document.querySelectorAll('.park__car-item'),
+        parkCarData = document.querySelectorAll(`.park__car-item[data-park-car=${parkClassData}]`);
+
+  // Убираем ненужные карточки
+  parkCarAll.forEach(item => {
+    item.style.display = 'none';
+    item.classList.remove('_show');
+  });
+
+  // Показываем нужные карточки
+  parkCarData.forEach(item => { 
+    item.style.display = 'flex';
+    // let i = 0;
+
+    // const parkCarInterval = setInterval(() => {
+    //   item.style.transitionDelay = i + 's';
+    //   // i = i + 0.1;
+
+    //   if (i >= parkCarData.length) {
+    //     clearInterval(parkCarInterval);
+    //   }
+    // });
+
+    setTimeout(() => {
+      item.classList.add('_show');
+    }, 1);
+  });
+
+  console.log(parkCarData);
+
+
+}

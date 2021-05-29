@@ -1460,10 +1460,20 @@ section {
   border: 1px solid var(--outline);
   -webkit-border-radius: 16px;
           border-radius: 16px;
+  overflow: hidden;
   cursor: pointer;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+}
+
+.park__class__item img {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .park__class__item:hover {
@@ -1471,8 +1481,14 @@ section {
 }
 
 .park__class__item._active {
-  background: var(--accent-second);
-  border: 1px solid var(--accent-second);
+  background: rgba(46, 139, 248, 0.05);
+  border: 1px solid var(--accent);
+}
+
+.park__class__item._active img {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .park__class-img {
@@ -1572,6 +1588,10 @@ section {
   -webkit-border-radius: 16px;
           border-radius: 16px;
   padding: 32px 0;
+  -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+          transform: scale(0.5);
+  opacity: 0;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
@@ -1580,6 +1600,13 @@ section {
 .park__car-item:hover {
   -webkit-box-shadow: 0px 8px 32px rgba(26, 109, 186, 0.08);
           box-shadow: 0px 8px 32px rgba(26, 109, 186, 0.08);
+}
+
+.park__car-item._show {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
 }
 
 .park__car-item._sale .park__car-sale {
@@ -1807,7 +1834,7 @@ section {
 
 .park-more-link {
   width: 280px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   text-align: center;
 }
@@ -1945,7 +1972,7 @@ section {
 
 .rental-more-link {
   width: 280px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   text-align: center;
 }
@@ -2137,6 +2164,8 @@ section {
 .reviews-btn-more-link {
   display: inline-block;
   width: 280px;
+  font-size: 16px;
+  font-weight: 600;
   text-align: center;
 }
 
