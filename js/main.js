@@ -3,7 +3,8 @@ const body = document.querySelector('body'),
       menuOpen = document.querySelector('.nav-burger'),
       menuClose = document.querySelector('.nav-menu-close');
 
-menuOpen.addEventListener('click', () => {
+menuOpen.addEventListener('click', (e) => {
+  e.stopPropagation();
   menu.classList.add('_show');
   body.classList.add('_lock');
 });
