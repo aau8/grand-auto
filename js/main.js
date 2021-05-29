@@ -220,8 +220,36 @@ function parkFilter(parkClass) {
       item.classList.add('_show');
     }, 1);
   });
-
-  console.log(parkCarData);
-
-
 }
+
+// Перенос данных в модальное окно на главном экране
+
+const mainBtn = document.querySelector('.main-btn'),
+      mainCarTitleElem = document.querySelector('.main__select-car .select-current'),
+      mainCarDayElem = document.querySelector('.main__select-day .select-current'),
+      mainCarPriceElem = document.querySelector('.main__price-all span'),
+      mainCarPriceDayElem = document.querySelector('.main__price-day span'),
+      mainCarDepositElem = document.querySelector('.main__price-deposit span');
+
+mainBtn.addEventListener('click', () => {
+  mainMoveModule();
+});
+
+function mainMoveModule() {
+  const carTitle = mainCarTitleElem.innerHTML,
+        carDay = mainCarDayElem.innerHTML,
+        carPrice = mainCarPriceElem.innerHTML,
+        carPriceDay = mainCarPriceDayElem.innerHTML,
+        carDeposit = mainCarDepositElem.innerHTML;
+
+  document.querySelector('.modal-rent-info-title').innerText = carTitle;
+  document.querySelector('.modal-rent-info-day span').innerText = carDay;
+  document.querySelector('.modal-rent-info-price-day span').innerText = carPriceDay;
+  document.querySelector('.modal-rent-info-deposit span').innerText = carDeposit;
+  document.querySelector('.modal-rent-info-price span').innerText = carPrice;
+
+  
+
+
+  console.log(carTitle,carDay,carPrice,carPriceDay,carDeposit);
+};
