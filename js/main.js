@@ -166,3 +166,12 @@ function rentalSetInfo(icon,title,text) {
   rentalTitle.innerText = title;
   rentalText.innerText = text;
 }
+
+// Закрытие модального окна в разделе "rental"
+
+const rentalModalClose = document.querySelector('.modal-condition-btn');
+
+rentalModalClose.addEventListener('click', (e) => {
+  rentalModalClose.closest('.modal-condition').classList.remove('_show');
+  body.classList.remove('_lock');
+});
