@@ -30,7 +30,11 @@
 }
 
 .select-current {
-  font-size: 18px;
+  font-size: 16px;
+
+  @media screen and (max-width: 400px) {
+    font-size: 14px;
+  }
 }
 
 .select-icon {
@@ -100,5 +104,9 @@
 
   &:hover {
     background: #f7f7f7;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 14px;
   }
 }

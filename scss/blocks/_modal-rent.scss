@@ -1,0 +1,170 @@
+.modal-rent-info {
+  border-bottom: 1px solid $outline;
+}
+
+.modal-rent-info__body {
+  padding: 24px;
+
+  @media screen and (max-width: 490px) {
+    padding: 24px 16px;
+  }
+}
+
+.modal-rent-info__list {
+  display: flex;
+  align-items: center;
+  margin: 16px 0 0 0;
+
+  @media screen and (max-width: 440px) {
+    align-items: flex-start;
+    flex-direction: column; 
+  }
+}
+
+.modal-rent-info__item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin: 0 24px 0 0;
+
+    @media screen and (max-width: 440px) {
+      margin: 0 0 6px 0;
+    }
+  }
+}
+
+.modal-rent-info__item-icon {
+  width: 18px;
+  height: 18px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.modal-rent-info__item-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: $second;
+  margin: 0 0 0 12px;
+}
+
+.modal-rent-form__body {
+  padding: 24px;
+
+  @media screen and (max-width: 490px) {
+    padding: 24px 16px;
+  }
+}
+
+.modal-rent-info-title {
+  
+  @media screen and (max-width: 490px) {
+    font-size: 22px;
+  }
+}
+
+.modal-rent__inputs {
+
+  &:not(:last-child) {
+    margin: 0 0 32px 0;
+  }
+
+  &:nth-child(1) {
+
+    @media screen and (max-width: 490px) {
+      flex-direction: row;
+
+      & .modal__input {
+        margin: 0 16px 0 0;
+      }
+    }
+  }
+
+  & .modal__input {
+    width: 50%;
+
+    @media screen and (max-width: 490px) {
+      width: 100%;
+    }
+  }
+
+  & .modal-rent-select {
+    width: 50%;
+  }
+
+  & .modal-rent__input-icon {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    width: 18px;
+    height: 18px;
+    transform: translate(0,-50%);
+    pointer-events: none;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+  
+      & path {
+        fill: $main;
+      }
+    }
+  }
+}
+
+::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.modal-rent-textarea {
+  height: 100px;
+
+  & textarea {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.modal-rent__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0 0 0;
+
+  @media screen and (max-width: 430px) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.modal-rent-price {
+  font-size: 56px;
+  font-weight: 700;
+  color: $accent;
+  white-space: nowrap;
+  margin: 0 24px 0 0;
+
+  @media screen and (max-width: 500px) {
+    font-size: 40px;
+  }
+}
+
+.modal-rent-btn {
+  max-width: 250px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+
+  @media screen and (max-width: 430px) {
+    max-width: none;
+    margin: 12px 0 0 0;
+  }
+}
