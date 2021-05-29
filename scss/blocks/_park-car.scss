@@ -20,7 +20,7 @@
 }
 
 .park__car-item {
-  display: flex;
+  display: none;
   flex-direction: column;
   max-width: 384px;
   width: 100%;
@@ -39,7 +39,7 @@
   &._show {
     transform: scale(1);
     opacity: 1;
-    
+    display: flex;
     // &:nth-child(1) {
     //   transition-delay: .1s; 
     // }

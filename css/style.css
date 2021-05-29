@@ -1572,10 +1572,7 @@ section {
 }
 
 .park__car-item {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -1607,6 +1604,10 @@ section {
       -ms-transform: scale(1);
           transform: scale(1);
   opacity: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .park__car-item._sale .park__car-sale {
