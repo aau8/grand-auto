@@ -463,35 +463,35 @@
             <p class="rental-text">Компания «На Прокат» предоставляет всем жителям полуострова и гостям Крыма услуги недорогого автопроката. У нас можно взять машину в аренду на сутки, неделю или несколько месяцев. Не отказывайте себе в свободе передвижения: арендуйте современные исправные авто на время отпуска, командировки, или пока ваш автомобиль находится в ремонте. К вашим услугам – большой автопарк новых автомобилей, более чем адекватные цены и отличный качественный сервис. <br> <br> Если во время отдыха хотите сэкономить на такси и при этом осмотреть самые красивые места полуострова, вам не обойтись без услуг нашей компании. Чтобы заказать аренду авто, выберите машину на сайте и забронируйте на нужную дату. Сделать это можно по телефону или онлайн.</p>
           </div>
           <ul class="rental__services">
-            <li class="rental__service">
+            <li class="rental__service modal-open" data-modal-open="condition" data-rental-info="money">
               <div class="rental__service-icon"><img src="img/rental-money.svg" alt="Деньги"></div>
               <span class="rental__services-text">Минимальный залог</span>
             </li>
-            <li class="rental__service">
+            <li class="rental__service modal-open" data-modal-open="condition" data-rental-info="documents">
               <div class="rental__service-icon"><img src="img/rental-document.svg" alt="Документы"></div>
               <span class="rental__services-text">Быстрое оформление по паспорту и правам</span>
             </li>
-            <li class="rental__service">
+            <li class="rental__service modal-open" data-modal-open="condition" data-rental-info="support">
               <div class="rental__service-icon"><img src="img/rental-repair.svg" alt="Техподдержка"></div>
               <span class="rental__services-text">Техподдержка 24/7</span>
             </li>
-            <li class="rental__service">
+            <li class="rental__service modal-open" data-modal-open="condition" data-rental-info="deposit">
               <div class="rental__service-icon"><img src="img/rental-withdrawal.svg" alt="Залог"></div>
               <span class="rental__services-text">Возврат залога по карте до 30 суток</span>
             </li>
-            <li class="rental__service">
+            <li class="rental__service modal-open" data-modal-open="condition" data-rental-info="car">
               <div class="rental__service-icon"><img src="img/rental-car.svg" alt="Автомобиль"></div>
               <span class="rental__services-text">Новые автомобили</span>
             </li>
-            <li class="rental__service">
+            <li class="rental__service modal-open" data-modal-open="condition" data-rental-info="mileage">
               <div class="rental__service-icon"><img src="img/rental-arrow.svg" alt="Пробег"></div>
               <span class="rental__services-text">Неограниченный пробег</span>
             </li>
-            <li class="rental__service">
+            <li class="rental__service modal-open" data-modal-open="condition" data-rental-info="location">
               <div class="rental__service-icon"><img src="img/rental-location.svg" alt="Локация"></div>
               <span class="rental__services-text">Доставка автомобиля в любой город</span>
             </li>
-            <li class="rental__service">
+            <li class="rental__service modal-open" data-modal-open="condition" data-rental-info="airport">
               <div class="rental__service-icon"><img src="img/rental-plane.svg" alt="Аэропорт"></div>
               <span class="rental__services-text">Наличие автомобилей в аэропорту</span>
             </li>
@@ -963,6 +963,23 @@
                 </div>
               </form>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-condition" data-modal="condition">
+      <div class="modal__body">
+        <div class="modal__content">
+          <div class="modal__header">
+            <div class="modal-condition__header">
+              <div class="modal-condition-icon"><img src="img/rental-money.svg" alt=""></div>
+              <h3 class="modal-title modal-condition-title">Минимальный залог</h3>
+            </div>
+            <button class="modal-close"></button>
+          </div>
+          <div class="modal-condition__content">
+            <p class="modal-condition-text">Компания «На Прокат» предоставляет всем жителям полуострова и гостям Крыма услуги недорогого автопроката. У нас можно взять машину в аренду на сутки, неделю или несколько месяцев. Не отказывайте себе в свободе передвижения: арендуйте современные исправные авто на время отпуска, командировки, или пока ваш автомобиль находится в ремонте. К вашим услугам – большой автопарк новых автомобилей, более чем адекватные цены и отличный качественный сервис.</p>
+            <button class="btn btn-round modal-condition-btn">ОК</button>
           </div>
         </div>
       </div>

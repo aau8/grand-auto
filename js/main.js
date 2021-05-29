@@ -129,3 +129,40 @@ const swiper = new Swiper('.swiper-container', {
     prevEl: '.reviews__arrows-left',
   },
 });
+
+
+
+// Подставление нужной информации в карточки в разделе "rental"
+
+const rentalCard = document.querySelectorAll('.rental__service');
+
+rentalCard.forEach(item => {
+  item.addEventListener('click', () => {
+    rentalCardInfo(item).then(e => {
+      rentalSetInfo(e[0],e[1],e[2]);
+    });
+  });
+});
+
+async function rentalCardInfo(item) {
+    const rentalCardData = item.dataset.rentalInfo;
+
+    const  rentalRequest = await fetch('js/rental-info.json'),
+           rentalResponse = await rentalRequest.json();
+
+    const rentalIcon = rentalResponse[rentalCardData][0],
+          rentalTitle = rentalResponse[rentalCardData][1],
+          rentalText = rentalResponse[rentalCardData][2];
+
+    return [rentalIcon,rentalTitle,rentalText];
+}
+
+function rentalSetInfo(icon,title,text) {
+  const rentalIcon = document.querySelector('.modal-condition-icon img'),
+        rentalTitle = document.querySelector('.modal-condition-title'),
+        rentalText = document.querySelector('.modal-condition-text');
+
+  rentalIcon.setAttribute('src', `img/${icon}`);
+  rentalTitle.innerText = title;
+  rentalText.innerText = text;
+}

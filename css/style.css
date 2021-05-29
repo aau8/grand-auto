@@ -1889,8 +1889,15 @@ section {
   cursor: pointer;
 }
 
-.rental__service:hover {
+@media screen and (min-width: 768px) {
+  .rental__service:hover {
+    border: 1px solid var(--accent);
+  }
+}
+
+.rental__service:active {
   border: 1px solid var(--accent);
+  background: rgba(46, 139, 248, 0.05);
 }
 
 @media screen and (max-width: 500px) {
@@ -2826,5 +2833,58 @@ a.footer__column-item-text:hover {
   .modal-rent-btn {
     max-width: none;
     margin: 12px 0 0 0;
+  }
+}
+
+.modal-condition .modal__header {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.modal-condition .modal-condition-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 0 12px 0;
+}
+
+.modal-condition .modal-condition-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 490px) {
+  .modal-condition .modal-condition-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.modal-condition__content {
+  padding: 24px 24px 32px;
+}
+
+@media screen and (max-width: 490px) {
+  .modal-condition__content {
+    padding: 16px 16px 24px;
+  }
+}
+
+.modal-condition-text {
+  line-height: 1.6;
+}
+
+.modal-condition-btn {
+  max-width: 250px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 24px 0 0 0;
+}
+
+@media screen and (max-width: 490px) {
+  .modal-condition-btn {
+    max-width: none;
   }
 }

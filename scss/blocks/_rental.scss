@@ -46,8 +46,15 @@
   transition: $transition;
   cursor: pointer;
 
-  &:hover {
+  @media screen and (min-width: $minHover) {
+    &:hover {
+      border: 1px solid $accent;
+    }
+  }
+
+  &:active {
     border: 1px solid $accent;
+    background: rgba(46, 139, 248, 0.05);
   }
 
   @media screen and (max-width: 500px) {
