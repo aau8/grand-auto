@@ -1,0 +1,144 @@
+.modal-review-form {
+  padding: 24px;
+
+  @media screen and (max-width: 490px) {
+    padding: 24px 16px;
+  }
+}
+
+.modal-review-textarea {
+  height: 100px;
+  margin: 32px 0 0 0;
+
+  & textarea {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.modal-review__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0 0 0;
+
+  @media screen and (max-width: 510px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.modal-review__estimation {
+
+  @media screen and (max-width: 510px) {
+    width: 100%;
+  }
+}
+
+.modal-review__estimation-title {
+  font-size: 14px;
+  color: $second;
+}
+
+.modal-review__list {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin: 8px 0 0 0;
+
+  @media screen and (max-width: 510px) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.modal-review-star {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+
+  & svg {
+    width: 100%;
+    height: 100%;
+    transition: $transition;
+  }
+
+  &:not(:first-child) {
+    margin: 0 16px 0 0;
+  }
+
+  &:nth-child(5):hover svg path{
+    fill: #EFAB45;
+  }
+
+  &:nth-child(4):hover {
+
+    & svg path {
+      fill: #EFAB45;
+    }
+    
+    & ~ .modal-review-star:nth-child(5) svg path {
+      fill: #EFAB45;
+    }
+  }
+
+  &:nth-child(3):hover {
+
+    & svg path {
+      fill: #EFAB45;
+    }
+    
+    & ~ .modal-review-star:nth-child(5) svg path,
+    & ~ .modal-review-star:nth-child(4) svg path {
+      fill: #EFAB45;
+    }
+  }
+
+  &:nth-child(2):hover {
+
+    & svg path {
+      fill: #EFAB45;
+    }
+    
+    & ~ .modal-review-star:nth-child(5) svg path,
+    & ~ .modal-review-star:nth-child(4) svg path,
+    & ~ .modal-review-star:nth-child(3) svg path {
+      fill: #EFAB45;
+    }
+  }
+
+  &:nth-child(1):hover {
+
+    & svg path {
+      fill: #EFAB45;
+    }
+    
+    & ~ .modal-review-star:nth-child(5) svg path,
+    & ~ .modal-review-star:nth-child(4) svg path,
+    & ~ .modal-review-star:nth-child(3) svg path,
+    & ~ .modal-review-star:nth-child(2) svg path {
+      fill: #EFAB45;
+    }
+  }
+
+  &._fill svg path {
+    fill: #EFAB45;
+  }
+
+  @media screen and (max-width: 510px) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.modal-review-btn {
+  max-width: 250px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 24px 0 0 0;
+
+  @media screen and (max-width: 510px) {
+    max-width: none;
+  }
+}

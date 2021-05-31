@@ -81,33 +81,38 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
 
 // Скрипт для элементов "select"
 
-function select() {
-  const selectHeader = document.querySelectorAll('.select__header'),
-        selectItem = document.querySelectorAll('.select-item');
+const selectHeader = document.querySelectorAll('.select__header'),
+      selectItem = document.querySelectorAll('.select-item');
 
-  selectHeader.forEach(item => {
-    item.addEventListener('click', selectToggle);
-  });
+selectHeader.forEach(item => {
+  item.addEventListener('click', selectToggle);
+});
 
-  selectItem.forEach(item => {
-    item.addEventListener('click', selectChoose);
-  });
+selectItem.forEach(item => {
+  item.addEventListener('click', selectChoose);
+});
 
-  function selectToggle() {
-    this.parentNode.classList.toggle('_active');
-  };
+function selectToggle() {
+  // if (!this) {
+  //   const everySelect = document.querySelectorAll('.select');
 
-  function selectChoose() {
-    const text = this.innerText,
-          parent = this.closest('.select'),
-          currentSelect = parent.querySelector('.select-current');
-    
-    currentSelect.innerText = text;
-    parent.classList.remove('_active');
-  };
-}
+  //   for (let i = 0; i < everySelect.length; i++) {
+  //     everySelect[i].classList.remove('_active');
+  //   };
+  // };
 
-select();
+  this.parentNode.classList.toggle('_active');
+};
+
+function selectChoose() {
+  const text = this.innerText,
+        parent = this.closest('.select'),
+        currentSelect = parent.querySelector('.select-current');
+  
+  currentSelect.innerText = text;
+  parent.classList.remove('_active');
+};
+
 
 // reviews Swiper
 const swiper = new Swiper('.swiper-container', {
@@ -232,7 +237,7 @@ const mainBtn = document.querySelector('.main-btn'),
       mainCarDepositElem = document.querySelector('.main__price-deposit span');
 
 mainBtn.addEventListener('click', () => {
-  mainMoveModule();
+  mainMoveModule(); // Переносит данные с главного экрана в модальное окно
 });
 
 function mainMoveModule() {
@@ -247,9 +252,13 @@ function mainMoveModule() {
   document.querySelector('.modal-rent-info-price-day span').innerText = carPriceDay;
   document.querySelector('.modal-rent-info-deposit span').innerText = carDeposit;
   document.querySelector('.modal-rent-info-price span').innerText = carPrice;
-
-  
-
-
-  console.log(carTitle,carDay,carPrice,carPriceDay,carDeposit);
 };
+
+const reviewStars = document.querySelectorAll('.modal-review-star');
+
+reviewStars.forEach(star => {
+  star.addEventListener('click', () => {
+    
+    star.classList.toggle('_fill');
+  });
+})

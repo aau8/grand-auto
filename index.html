@@ -894,7 +894,7 @@
             <div class="reviews__pagination"></div>
           </div>
           <div class="reviews-btn-more">
-            <button class="btn-outline btn-round reviews-btn-more-link">Оставить отзыв</button>
+            <button class="btn-outline btn-round reviews-btn-more-link modal-open" data-modal-open="review">Оставить отзыв</button>
           </div>
         </div>
       </div>
@@ -1207,19 +1207,86 @@
         </div>
       </div>
     </div>
+    <!-- Модальное окно в разделе условий -->
+    <!-- Данные берутся из js/rental-info.json -->
     <div class="modal modal-condition" data-modal="condition">
       <div class="modal__body">
         <div class="modal__content">
           <div class="modal__header">
             <div class="modal-condition__header">
-              <div class="modal-condition-icon"><img src="img/rental-money.svg" alt=""></div>
-              <h3 class="modal-title modal-condition-title">Минимальный залог</h3>
+              <div class="modal-condition-icon"><img src="" alt=""></div>
+              <h3 class="modal-title modal-condition-title"></h3>
             </div>
             <button class="modal-close"></button>
           </div>
           <div class="modal-condition__content">
-            <p class="modal-condition-text">Компания «На Прокат» предоставляет всем жителям полуострова и гостям Крыма услуги недорогого автопроката. У нас можно взять машину в аренду на сутки, неделю или несколько месяцев. Не отказывайте себе в свободе передвижения: арендуйте современные исправные авто на время отпуска, командировки, или пока ваш автомобиль находится в ремонте. К вашим услугам – большой автопарк новых автомобилей, более чем адекватные цены и отличный качественный сервис.</p>
+            <p class="modal-condition-text"></p>
             <button class="btn btn-round modal-condition-btn">ОК</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-review" data-modal="review">
+      <div class="modal__body">
+        <div class="modal__content">
+          <div class="modal__header">
+            <h3 class="modal-title">Оставить отзыв</h3>
+            <button class="modal-close"></button> 
+          </div>
+          <div class="modal-review-form"> 
+            <form action="#" method="POST">
+              <div class="modal-callback__inputs">
+                <div class="modal__input">
+                  <input name="modal-callback-name" type="text" class="input">
+                  <label for="modal-callback-name" class="input-label">Имя</label>
+                </div>
+                <div class="modal__input">
+                  <input name="modal-callback-name" type="phone" class="input">
+                  <label for="modal-callback-name" class="input-label">Номер</label>
+                </div>
+              </div>
+              <div class="modal__input modal-review-textarea">
+                <textarea name="modal-callback-name" class="input"></textarea>
+                <label for="modal-callback-name" class="input-label">Сообщение</label>
+              </div>
+              <div class="modal-callback__checkbox">
+                <input name="modal-callback__checkbox-input" type="checkbox" checked>
+                <label for="modal-callback__checkbox-input">Я ознакомлен(-а) с <a href="#"> Политикой конфиденциальности</a></label>
+              </div>
+              <div class="modal-review__footer">
+                <div class="modal-review__estimation">
+                  <span class="modal-review__estimation-title">Оценка качества</span>
+                  <ul class="modal-review__list">
+                    <li class="modal-review-star">
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 1L9.97724 5.08591L15 5.96601L11.5017 9.37073L12.128 14L7.5 12.0188L2.8584 14L3.49811 9.37073L0 5.96601L5.0226 5.08591L7.5 1" fill="#DADDDF"/>
+                      </svg>
+                    </li>
+                    <li class="modal-review-star">
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 1L9.97724 5.08591L15 5.96601L11.5017 9.37073L12.128 14L7.5 12.0188L2.8584 14L3.49811 9.37073L0 5.96601L5.0226 5.08591L7.5 1" fill="#DADDDF"/>
+                      </svg>
+                    </li>
+                    <li class="modal-review-star">
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 1L9.97724 5.08591L15 5.96601L11.5017 9.37073L12.128 14L7.5 12.0188L2.8584 14L3.49811 9.37073L0 5.96601L5.0226 5.08591L7.5 1" fill="#DADDDF"/>
+                      </svg>
+                    </li>
+                    <li class="modal-review-star">
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 1L9.97724 5.08591L15 5.96601L11.5017 9.37073L12.128 14L7.5 12.0188L2.8584 14L3.49811 9.37073L0 5.96601L5.0226 5.08591L7.5 1" fill="#DADDDF"/>
+                      </svg>
+                    </li>
+                    <li class="modal-review-star">
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 1L9.97724 5.08591L15 5.96601L11.5017 9.37073L12.128 14L7.5 12.0188L2.8584 14L3.49811 9.37073L0 5.96601L5.0226 5.08591L7.5 1" fill="#DADDDF"/>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <button type="submit" class="btn btn-round modal-review-btn">Отправить</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

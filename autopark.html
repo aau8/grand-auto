@@ -7,7 +7,7 @@
   <title>Document</title>
   <link rel="shortcut icon" href="img/favicon.ico" type="image/ico">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/contacts.css">
+  <link rel="stylesheet" href="css/autopark.css">
 </head>
 <body>
   <div class="wrapper">
@@ -100,7 +100,630 @@
         </div>
       </div>
     </header>
-
+    
+    <section class="park">
+      <div class="park__body">
+        <div class="park__class">
+          <div class="container">
+            <div class="park__header">
+              <div class="breadcrumbs autopark-breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li><a href="#">Главная \</a></li>
+                </ul>
+              </div>
+              <h1 class="park__header-title">Парк автомобилей</h1>
+            </div>
+            <div class="park__class__body">
+              <h2 class="park-title park__class-title">Выберите класс авто</h2>
+              <ul class="park__class__list">
+                <li class="park__class__item" data-park-class="budget">
+                  <div class="park__class-img"><img src="img/class-budget.png" alt="Бюджетный класс"></div>
+                  <div class="park__class__item__content">
+                    <h3 class="park__class__item-title">Бюджетный</h3>
+                    <span class="park__class-price">1500 ₽</span>
+                    <span class="park__class-correction">от / сутки</span>
+                  </div>
+                </li>
+                <li class="park__class__item" data-park-class="comfort">
+                  <div class="park__class-img"><img src="img/class-comfort.png" alt="Комфорт класс"></div>
+                  <div class="park__class__item__content">
+                    <h3 class="park__class__item-title">Комфорт+</h3>
+                    <span class="park__class-price">1500 ₽</span>
+                    <span class="park__class-correction">от / сутки</span>
+                  </div>
+                </li>
+                <li class="park__class__item _active" data-park-class="crossover">
+                  <div class="park__class-img"><img src="img/class-crossover.png" alt="Кроссоверы"></div>
+                  <div class="park__class__item__content">
+                    <h3 class="park__class__item-title">Кроссоверы</h3>
+                    <span class="park__class-price">1500 ₽</span>
+                    <span class="park__class-correction">от / сутки</span>
+                  </div>
+                </li>
+                <li class="park__class__item" data-park-class="business">
+                  <div class="park__class-img"><img src="img/class-business.png" alt="Бизнес класс"></div>
+                  <div class="park__class__item__content">
+                    <h3 class="park__class__item-title">Бизнес</h3>
+                    <span class="park__class-price">1500 ₽</span>
+                    <span class="park__class-correction">от / сутки</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="autopark-filter">
+          <div class="container">
+            <div class="autopark-filter__body">
+              <div class="autopark-filter__selects">
+                <div class="autopark-filter__list">
+                  <div class="select main__select autopark__select-car">
+                    <div class="input select__header">
+                      <span class="select-current">Седан (Кроссоверы)</span>
+                      <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
+                      <div class="input-label select-label"><span>Тип кузова</span></div>
+                    </div>
+                    <ul class="select__body">
+                      <li class="select-item">Кабриолет</li>
+                      <li class="select-item">Внедорожник</li>
+                      <li class="select-item">Седан (Кроссоверы)</li>
+                    </ul>
+                  </div>
+                  <div class="select main__select autopark__select-car">
+                    <div class="input select__header">
+                      <span class="select-current">Автоматическая</span>
+                      <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
+                      <div class="input-label select-label"><span>Коробка передач</span></div>
+                    </div>
+                    <ul class="select__body">
+                      <li class="select-item">Механическая</li>
+                    </ul>
+                  </div>
+                  <div class="select main__select autopark__select-car">
+                    <div class="input select__header">
+                      <span class="select-current">12 мест</span>
+                      <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
+                      <div class="input-label select-label"><span>Пассажиры</span></div>
+                    </div>
+                    <ul class="select__body">
+                      <li class="select-item">2 места</li>
+                      <li class="select-item">4 места</li>
+                      <li class="select-item">6 мест</li>
+                      <li class="select-item">8 мест</li>
+                      <li class="select-item">12 мест</li>
+                    </ul>
+                  </div>
+                  <div class="select main__select autopark__select-car">
+                    <div class="input select__header">
+                      <span class="select-current">3 чемодана</span>
+                      <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
+                      <div class="input-label select-label"><span>Объем багажника</span></div>
+                    </div>
+                    <ul class="select__body">
+                      <li class="select-item">1 чемодан</li>
+                      <li class="select-item">2 чемодана</li>
+                      <li class="select-item">3 чемодана</li>
+                      <li class="select-item">4 чемодана</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="select main__select autopark__select-car autopark__select-car-popular">
+                  <div class="input select__header">
+                    <span class="select-current">Сначала дешевые</span>
+                    <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
+                    <div class="input-label select-label"><span>Сортировка</span></div>
+                  </div>
+                  <ul class="select__body">
+                    <li class="select-item">Сначала дорогие</li>
+                    <li class="select-item">Популярные</li>
+                  </ul>
+                </div>
+                <button class="autopark-filter-burger modal-open" data-modal-open="filter"><img src="img/autopark-filter.svg" alt="Фильтр"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="park__car">
+          <div class="container">
+            <div class="park__car__body">
+              <h2 class="park-title park__car-title">Автомобили в классе</h2>
+              <ul class="park__car__list">
+                <li class="park__car-item _show" data-park-car="crossover">
+                  <div class="park__car__header">
+                    <div class="park__car__character park__car__people">
+                      <div class="park__car__character-icon"><img src="img/car-people.svg" alt="Кол-во мест"></div>
+                      <span class="park__car__character-text">5</span>
+                    </div>
+                    <div class="park__car__character park__car__bag">
+                      <div class="park__car__character-icon"><img src="img/car-bag.svg" alt="Кол-во мест для багажа"></div>
+                      <span class="park__car__character-text">3</span>
+                    </div>
+                    <span class="park__car-sale">Акция</span>
+                  </div>
+                  <div class="park__car-img"><img src="img/car-1.png" alt="Машина"></div>
+                  <div class="park__car__content">
+                    <span class="park__car-class">Кроссоверы</span>
+                    <h3 class="park__car-item-title">Volkswagen Tiguan 2.0</h3>
+                    <ul class="park__car__parameters">
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Двигатель</span>
+                        <span class="park__car__parameter-descr">1.6 Бензин</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Расход</span>
+                        <span class="park__car__parameter-descr">10л / 100км</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Трансмиссия</span>
+                        <span class="park__car__parameter-descr">АКПП</span>
+                      </li>
+                    </ul>
+                    <div class="park__car__footer">
+                      <div class="park__car__price">
+                        <span class="park__car__price-old">5 500 ₽</span>
+                        <span class="park__car__price-all">15 500 ₽</span>
+                        <div class="park__car__price-correction">от / сутки</div>
+                      </div>
+                      <button class="btn-outline park__car-btn">Подробнее</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="park__car-item _show" data-park-car="crossover">
+                  <div class="park__car__header">
+                    <div class="park__car__character park__car__people">
+                      <div class="park__car__character-icon"><img src="img/car-people.svg" alt="Кол-во мест"></div>
+                      <span class="park__car__character-text">5</span>
+                    </div>
+                    <div class="park__car__character park__car__bag">
+                      <div class="park__car__character-icon"><img src="img/car-bag.svg" alt="Кол-во мест для багажа"></div>
+                      <span class="park__car__character-text">3</span>
+                    </div>
+                    <span class="park__car-sale">Акция</span>
+                  </div>
+                  <div class="park__car-img"><img src="img/car-2.png" alt="Машина"></div>
+                  <div class="park__car__content">
+                    <span class="park__car-class">Кроссоверы</span>
+                    <h3 class="park__car-item-title">Hyundai Genesis 70</h3>
+                    <ul class="park__car__parameters">
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Двигатель</span>
+                        <span class="park__car__parameter-descr">1.6 Бензин</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Расход</span>
+                        <span class="park__car__parameter-descr">10л / 100км</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Трансмиссия</span>
+                        <span class="park__car__parameter-descr">АКПП</span>
+                      </li>
+                    </ul>
+                    <div class="park__car__footer">
+                      <div class="park__car__price">
+                        <span class="park__car__price-old">5 500 ₽</span>
+                        <span class="park__car__price-all">4 500 ₽</span>
+                        <div class="park__car__price-correction">от / сутки</div>
+                      </div>
+                      <button class="btn-outline park__car-btn">Подробнее</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="park__car-item _show _sale" data-park-car="crossover">
+                  <div class="park__car__header">
+                    <div class="park__car__character park__car__people">
+                      <div class="park__car__character-icon"><img src="img/car-people.svg" alt="Кол-во мест"></div>
+                      <span class="park__car__character-text">5</span>
+                    </div>
+                    <div class="park__car__character park__car__bag">
+                      <div class="park__car__character-icon"><img src="img/car-bag.svg" alt="Кол-во мест для багажа"></div>
+                      <span class="park__car__character-text">3</span>
+                    </div>
+                    <span class="park__car-sale">Акция</span>
+                  </div>
+                  <div class="park__car-img"><img src="img/car-3.png" alt="Машина"></div>
+                  <div class="park__car__content">
+                    <span class="park__car-class">Кроссоверы</span>
+                    <h3 class="park__car-item-title">Kia Optima 1.6 МКПП</h3>
+                    <ul class="park__car__parameters">
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Двигатель</span>
+                        <span class="park__car__parameter-descr">1.6 Бензин</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Расход</span>
+                        <span class="park__car__parameter-descr">10л / 100км</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Трансмиссия</span>
+                        <span class="park__car__parameter-descr">МКПП</span>
+                      </li>
+                    </ul>
+                    <div class="park__car__footer">
+                      <div class="park__car__price">
+                        <span class="park__car__price-old">5 500 ₽</span>
+                        <span class="park__car__price-all">3 500 ₽</span>
+                        <div class="park__car__price-correction">от / сутки</div>
+                      </div>
+                      <button class="btn-outline park__car-btn">Подробнее</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="park__car-item _show" data-park-car="crossover">
+                  <div class="park__car__header">
+                    <div class="park__car__character park__car__people">
+                      <div class="park__car__character-icon"><img src="img/car-people.svg" alt="Кол-во мест"></div>
+                      <span class="park__car__character-text">5</span>
+                    </div>
+                    <div class="park__car__character park__car__bag">
+                      <div class="park__car__character-icon"><img src="img/car-bag.svg" alt="Кол-во мест для багажа"></div>
+                      <span class="park__car__character-text">3</span>
+                    </div>
+                    <span class="park__car-sale">Акция</span>
+                  </div>
+                  <div class="park__car-img"><img src="img/car-4.png" alt="Машина"></div>
+                  <div class="park__car__content">
+                    <span class="park__car-class">Кроссоверы</span>
+                    <h3 class="park__car-item-title">Nissan Murano</h3>
+                    <ul class="park__car__parameters">
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Двигатель</span>
+                        <span class="park__car__parameter-descr">1.6 Бензин</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Расход</span>
+                        <span class="park__car__parameter-descr">10л / 100км</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Трансмиссия</span>
+                        <span class="park__car__parameter-descr">АКПП</span>
+                      </li>
+                    </ul>
+                    <div class="park__car__footer">
+                      <div class="park__car__price">
+                        <span class="park__car__price-old">5 500 ₽</span>
+                        <span class="park__car__price-all">5 500 ₽</span>
+                        <div class="park__car__price-correction">от / сутки</div>
+                      </div>
+                      <button class="btn-outline park__car-btn">Подробнее</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="park__car-item _show" data-park-car="crossover">
+                  <div class="park__car__header">
+                    <div class="park__car__character park__car__people">
+                      <div class="park__car__character-icon"><img src="img/car-people.svg" alt="Кол-во мест"></div>
+                      <span class="park__car__character-text">5</span>
+                    </div>
+                    <div class="park__car__character park__car__bag">
+                      <div class="park__car__character-icon"><img src="img/car-bag.svg" alt="Кол-во мест для багажа"></div>
+                      <span class="park__car__character-text">3</span>
+                    </div>
+                    <span class="park__car-sale">Акция</span>
+                  </div>
+                  <div class="park__car-img"><img src="img/car-5.png" alt="Машина"></div>
+                  <div class="park__car__content">
+                    <span class="park__car-class">Кроссоверы</span>
+                    <h3 class="park__car-item-title">Skoda Octavia</h3>
+                    <ul class="park__car__parameters">
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Двигатель</span>
+                        <span class="park__car__parameter-descr">1.6 Бензин</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Расход</span>
+                        <span class="park__car__parameter-descr">10л / 100км</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Трансмиссия</span>
+                        <span class="park__car__parameter-descr">АКПП</span>
+                      </li>
+                    </ul>
+                    <div class="park__car__footer">
+                      <div class="park__car__price">
+                        <span class="park__car__price-old">5 500 ₽</span>
+                        <span class="park__car__price-all">4 500 ₽</span>
+                        <div class="park__car__price-correction">от / сутки</div>
+                      </div>
+                      <button class="btn-outline park__car-btn">Подробнее</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="park__car-item _show" data-park-car="crossover">
+                  <div class="park__car__header">
+                    <div class="park__car__character park__car__people">
+                      <div class="park__car__character-icon"><img src="img/car-people.svg" alt="Кол-во мест"></div>
+                      <span class="park__car__character-text">5</span>
+                    </div>
+                    <div class="park__car__character park__car__bag">
+                      <div class="park__car__character-icon"><img src="img/car-bag.svg" alt="Кол-во мест для багажа"></div>
+                      <span class="park__car__character-text">3</span>
+                    </div>
+                    <span class="park__car-sale">Акция</span>
+                  </div>
+                  <div class="park__car-img"><img src="img/car-6.png" alt="Машина"></div>
+                  <div class="park__car__content">
+                    <span class="park__car-class">Кроссоверы</span>
+                    <h3 class="park__car-item-title">Hyundai Genesis 80</h3>
+                    <ul class="park__car__parameters">
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Двигатель</span>
+                        <span class="park__car__parameter-descr">1.6 Бензин</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Расход</span>
+                        <span class="park__car__parameter-descr">10л / 100км</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Трансмиссия</span>
+                        <span class="park__car__parameter-descr">МКПП</span>
+                      </li>
+                    </ul>
+                    <div class="park__car__footer">
+                      <div class="park__car__price">
+                        <span class="park__car__price-old">5 500 ₽</span>
+                        <span class="park__car__price-all">3 500 ₽</span>
+                        <div class="park__car__price-correction">от / сутки</div>
+                      </div>
+                      <button class="btn-outline park__car-btn">Подробнее</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="park__car-item" data-park-car="budget">
+                  <div class="park__car__header">
+                    <div class="park__car__character park__car__people">
+                      <div class="park__car__character-icon"><img src="img/car-people.svg" alt="Кол-во мест"></div>
+                      <span class="park__car__character-text">5</span>
+                    </div>
+                    <div class="park__car__character park__car__bag">
+                      <div class="park__car__character-icon"><img src="img/car-bag.svg" alt="Кол-во мест для багажа"></div>
+                      <span class="park__car__character-text">3</span>
+                    </div>
+                    <span class="park__car-sale">Акция</span>
+                  </div>
+                  <div class="park__car-img"><img src="img/car-6.png" alt="Машина"></div>
+                  <div class="park__car__content">
+                    <span class="park__car-class">Кроссоверы</span>
+                    <h3 class="park__car-item-title">Hyundai Genesis 80</h3>
+                    <ul class="park__car__parameters">
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Двигатель</span>
+                        <span class="park__car__parameter-descr">1.6 Бензин</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Расход</span>
+                        <span class="park__car__parameter-descr">10л / 100км</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Трансмиссия</span>
+                        <span class="park__car__parameter-descr">МКПП</span>
+                      </li>
+                    </ul>
+                    <div class="park__car__footer">
+                      <div class="park__car__price">
+                        <span class="park__car__price-old">5 500 ₽</span>
+                        <span class="park__car__price-all">3 500 ₽</span>
+                        <div class="park__car__price-correction">от / сутки</div>
+                      </div>
+                      <button class="btn-outline park__car-btn">Подробнее</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="park__car-item" data-park-car="budget">
+                  <div class="park__car__header">
+                    <div class="park__car__character park__car__people">
+                      <div class="park__car__character-icon"><img src="img/car-people.svg" alt="Кол-во мест"></div>
+                      <span class="park__car__character-text">5</span>
+                    </div>
+                    <div class="park__car__character park__car__bag">
+                      <div class="park__car__character-icon"><img src="img/car-bag.svg" alt="Кол-во мест для багажа"></div>
+                      <span class="park__car__character-text">3</span>
+                    </div>
+                    <span class="park__car-sale">Акция</span>
+                  </div>
+                  <div class="park__car-img"><img src="img/car-6.png" alt="Машина"></div>
+                  <div class="park__car__content">
+                    <span class="park__car-class">Кроссоверы</span>
+                    <h3 class="park__car-item-title">Hyundai Genesis 80</h3>
+                    <ul class="park__car__parameters">
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Двигатель</span>
+                        <span class="park__car__parameter-descr">1.6 Бензин</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Расход</span>
+                        <span class="park__car__parameter-descr">10л / 100км</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Трансмиссия</span>
+                        <span class="park__car__parameter-descr">МКПП</span>
+                      </li>
+                    </ul>
+                    <div class="park__car__footer">
+                      <div class="park__car__price">
+                        <span class="park__car__price-old">5 500 ₽</span>
+                        <span class="park__car__price-all">3 500 ₽</span>
+                        <div class="park__car__price-correction">от / сутки</div>
+                      </div>
+                      <button class="btn-outline park__car-btn">Подробнее</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="park__car-item" data-park-car="comfort">
+                  <div class="park__car__header">
+                    <div class="park__car__character park__car__people">
+                      <div class="park__car__character-icon"><img src="img/car-people.svg" alt="Кол-во мест"></div>
+                      <span class="park__car__character-text">5</span>
+                    </div>
+                    <div class="park__car__character park__car__bag">
+                      <div class="park__car__character-icon"><img src="img/car-bag.svg" alt="Кол-во мест для багажа"></div>
+                      <span class="park__car__character-text">3</span>
+                    </div>
+                    <span class="park__car-sale">Акция</span>
+                  </div>
+                  <div class="park__car-img"><img src="img/car-5.png" alt="Машина"></div>
+                  <div class="park__car__content">
+                    <span class="park__car-class">Кроссоверы</span>
+                    <h3 class="park__car-item-title">Skoda Octavia</h3>
+                    <ul class="park__car__parameters">
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Двигатель</span>
+                        <span class="park__car__parameter-descr">1.6 Бензин</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Расход</span>
+                        <span class="park__car__parameter-descr">10л / 100км</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Трансмиссия</span>
+                        <span class="park__car__parameter-descr">АКПП</span>
+                      </li>
+                    </ul>
+                    <div class="park__car__footer">
+                      <div class="park__car__price">
+                        <span class="park__car__price-old">5 500 ₽</span>
+                        <span class="park__car__price-all">4 500 ₽</span>
+                        <div class="park__car__price-correction">от / сутки</div>
+                      </div>
+                      <button class="btn-outline park__car-btn">Подробнее</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="park__car-item" data-park-car="comfort">
+                  <div class="park__car__header">
+                    <div class="park__car__character park__car__people">
+                      <div class="park__car__character-icon"><img src="img/car-people.svg" alt="Кол-во мест"></div>
+                      <span class="park__car__character-text">5</span>
+                    </div>
+                    <div class="park__car__character park__car__bag">
+                      <div class="park__car__character-icon"><img src="img/car-bag.svg" alt="Кол-во мест для багажа"></div>
+                      <span class="park__car__character-text">3</span>
+                    </div>
+                    <span class="park__car-sale">Акция</span>
+                  </div>
+                  <div class="park__car-img"><img src="img/car-6.png" alt="Машина"></div>
+                  <div class="park__car__content">
+                    <span class="park__car-class">Кроссоверы</span>
+                    <h3 class="park__car-item-title">Hyundai Genesis 80</h3>
+                    <ul class="park__car__parameters">
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Двигатель</span>
+                        <span class="park__car__parameter-descr">1.6 Бензин</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Расход</span>
+                        <span class="park__car__parameter-descr">10л / 100км</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Трансмиссия</span>
+                        <span class="park__car__parameter-descr">МКПП</span>
+                      </li>
+                    </ul>
+                    <div class="park__car__footer">
+                      <div class="park__car__price">
+                        <span class="park__car__price-old">5 500 ₽</span>
+                        <span class="park__car__price-all">3 500 ₽</span>
+                        <div class="park__car__price-correction">от / сутки</div>
+                      </div>
+                      <button class="btn-outline park__car-btn">Подробнее</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="park__car-item" data-park-car="business">
+                  <div class="park__car__header">
+                    <div class="park__car__character park__car__people">
+                      <div class="park__car__character-icon"><img src="img/car-people.svg" alt="Кол-во мест"></div>
+                      <span class="park__car__character-text">5</span>
+                    </div>
+                    <div class="park__car__character park__car__bag">
+                      <div class="park__car__character-icon"><img src="img/car-bag.svg" alt="Кол-во мест для багажа"></div>
+                      <span class="park__car__character-text">3</span>
+                    </div>
+                    <span class="park__car-sale">Акция</span>
+                  </div>
+                  <div class="park__car-img"><img src="img/car-2.png" alt="Машина"></div>
+                  <div class="park__car__content">
+                    <span class="park__car-class">Кроссоверы</span>
+                    <h3 class="park__car-item-title">Hyundai Genesis 70</h3>
+                    <ul class="park__car__parameters">
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Двигатель</span>
+                        <span class="park__car__parameter-descr">1.6 Бензин</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Расход</span>
+                        <span class="park__car__parameter-descr">10л / 100км</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Трансмиссия</span>
+                        <span class="park__car__parameter-descr">АКПП</span>
+                      </li>
+                    </ul>
+                    <div class="park__car__footer">
+                      <div class="park__car__price">
+                        <span class="park__car__price-old">5 500 ₽</span>
+                        <span class="park__car__price-all">4 500 ₽</span>
+                        <div class="park__car__price-correction">от / сутки</div>
+                      </div>
+                      <button class="btn-outline park__car-btn">Подробнее</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="park__car-item" data-park-car="business">
+                  <div class="park__car__header">
+                    <div class="park__car__character park__car__people">
+                      <div class="park__car__character-icon"><img src="img/car-people.svg" alt="Кол-во мест"></div>
+                      <span class="park__car__character-text">5</span>
+                    </div>
+                    <div class="park__car__character park__car__bag">
+                      <div class="park__car__character-icon"><img src="img/car-bag.svg" alt="Кол-во мест для багажа"></div>
+                      <span class="park__car__character-text">3</span>
+                    </div>
+                    <span class="park__car-sale">Акция</span>
+                  </div>
+                  <div class="park__car-img"><img src="img/car-2.png" alt="Машина"></div>
+                  <div class="park__car__content">
+                    <span class="park__car-class">Кроссоверы</span>
+                    <h3 class="park__car-item-title">Hyundai Genesis 70</h3>
+                    <ul class="park__car__parameters">
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Двигатель</span>
+                        <span class="park__car__parameter-descr">1.6 Бензин</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Расход</span>
+                        <span class="park__car__parameter-descr">10л / 100км</span>
+                      </li>
+                      <li class="park__car__parameter">
+                        <span class="park__car__parameter-title">Трансмиссия</span>
+                        <span class="park__car__parameter-descr">АКПП</span>
+                      </li>
+                    </ul>
+                    <div class="park__car__footer">
+                      <div class="park__car__price">
+                        <span class="park__car__price-old">5 500 ₽</span>
+                        <span class="park__car__price-all">4 500 ₽</span>
+                        <div class="park__car__price-correction">от / сутки</div>
+                      </div>
+                      <button class="btn-outline park__car-btn">Подробнее</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="park-more">
+                <button class="btn-outline btn-round park-more-link">Показать еще</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="autopark-descr">
+      <div class="container">
+        <div class="autopark-descr__body">
+          <p class="rental-text autopark-descr-text">Компания «На Прокат» предоставляет всем жителям полуострова и гостям Крыма услуги недорогого автопроката. У нас можно взять машину в аренду на сутки, неделю или несколько месяцев. Не отказывайте себе в свободе передвижения: арендуйте современные исправные авто на время отпуска, командировки, или пока ваш автомобиль находится в ремонте. К вашим услугам – большой автопарк новых автомобилей, более чем адекватные цены и отличный качественный сервис. <br> <br> Если во время отдыха хотите сэкономить на такси и при этом осмотреть самые красивые места полуострова, вам не обойтись без услуг нашей компании. Чтобы заказать аренду авто, выберите машину на сайте и забронируйте на нужную дату. Сделать это можно по телефону или онлайн.</p>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
       <div class="footer__body"> 
         <div class="info">
@@ -287,7 +910,7 @@
             <button class="modal-close"></button> 
           </div>
           <div class="modal__form">
-            <form action="#" method="POST">
+            <form action="#" method="GET">
               <div class="modal-callback__inputs">
                 <div class="modal__input">
                   <input name="modal-callback-name" type="text" class="input">
@@ -303,6 +926,73 @@
                 <label for="modal-callback__checkbox-input">Я ознакомлен(-а) с <a href="#"> Политикой конфиденциальности</a></label>
               </div>
               <button type="submit" class="btn btn-round modal-callback-btn">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-filter" data-modal="filter">
+      <div class="modal__body">
+        <div class="modal__content">
+          <div class="modal__header">
+            <h3 class="modal-title">Фильтры</h3>
+            <button class="modal-filter-reset">Сбросить</button>
+            <button class="modal-close"></button> 
+          </div>
+          <div class="modal__form">
+            <form action="#" method="GET">
+              <div class="modal-callback__inputs">
+                <div class="select main__select autopark__select-car">
+                  <div class="input select__header">
+                    <span class="select-current">Седан (Кроссоверы)</span>
+                    <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
+                    <div class="input-label select-label"><span>Тип кузова</span></div>
+                  </div>
+                  <ul class="select__body">
+                    <li class="select-item">Кабриолет</li>
+                    <li class="select-item">Внедорожник</li>
+                    <li class="select-item">Седан (Кроссоверы)</li>
+                  </ul>
+                </div>
+                <div class="select main__select autopark__select-car">
+                  <div class="input select__header">
+                    <span class="select-current">Автоматическая</span>
+                    <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
+                    <div class="input-label select-label"><span>Коробка передач</span></div>
+                  </div>
+                  <ul class="select__body">
+                    <li class="select-item">Механическая</li>
+                  </ul>
+                </div>
+                <div class="select main__select autopark__select-car">
+                  <div class="input select__header">
+                    <span class="select-current">12 мест</span>
+                    <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
+                    <div class="input-label select-label"><span>Пассажиры</span></div>
+                  </div>
+                  <ul class="select__body">
+                    <li class="select-item">2 места</li>
+                    <li class="select-item">4 места</li>
+                    <li class="select-item">6 мест</li>
+                    <li class="select-item">8 мест</li>
+                    <li class="select-item">12 мест</li>
+                  </ul>
+                </div>
+                <div class="select main__select autopark__select-car">
+                  <div class="input select__header">
+                    <span class="select-current">3 чемодана</span>
+                    <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
+                    <div class="input-label select-label"><span>Объем багажника</span></div>
+                  </div>
+                  <ul class="select__body">
+                    <li class="select-item">1 чемодан</li>
+                    <li class="select-item">2 чемодана</li>
+                    <li class="select-item">3 чемодана</li>
+                    <li class="select-item">4 чемодана</li>
+                  </ul>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-round modal-callback-btn">Применить</button>
             </form>
           </div>
         </div>

@@ -1,0 +1,146 @@
+.autopark-filter {
+  margin: 32px 0; 
+}
+
+.autopark-filter__body {
+  padding: 42px 32px 24px 32px;
+  background: $accent-second;
+  border-radius: 16px;
+
+  @media screen and (max-width: 900px) {
+    padding: 24px 0;
+    background: none;
+  }
+}
+
+.autopark-filter__selects {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
+
+.autopark-filter__list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 900px) {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+.autopark__select-car {
+  width: 100%;
+  margin: 0 32px 0 0;
+
+  &:nth-child(1) {
+    max-width: 248px;
+  }
+
+  &:nth-child(2) {
+    max-width: 248px;
+  }
+
+  &:nth-child(3) {
+    max-width: 122px;
+  }
+
+  &:nth-child(4) {
+    max-width: 157px;
+  }
+
+  &.autopark__select-car-popular {
+    margin: 0;
+  }
+
+  & .select__header {
+    border: none;
+  }
+
+  & .select-current {
+    
+    @media screen and (max-width: 1180px) {
+      font-size: 14px;
+    }
+  }
+
+  & .select-icon {
+    margin: 0 0 0 6px;
+  }
+
+  & .input-label {
+    top: -20px;
+    left: 0;
+    padding: 0;
+    background: none;
+
+    & span {
+      transform: none;
+    }
+  }
+
+  & .select-item {
+    text-transform: none;
+
+    @media screen and (max-width: 1180px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.autopark-filter-burger {
+  display: none;
+
+  @media screen and (max-width: 900px) {
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $accent-second;
+    border-radius: 8px;
+    margin: 0 0 0 16px;
+  }
+}
+
+.modal-filter {
+
+  & .modal__header {
+    justify-content: initial;
+  }
+
+  & .modal-title {
+    margin: 0 auto 0 0;
+  }
+
+  & .modal-filter-reset {
+    font-size: 12px;
+    color: $second;
+    margin: 0 8px 0 auto;
+  }
+
+  & .modal-close {
+    margin: 0 0 0 0;
+  }
+
+  & .modal-callback__inputs {
+    align-items: flex-start;
+    padding: 24px 0;
+
+    & .autopark__select-car {
+      
+      &:not(:last-child) {
+        margin: 0 0 32px 0;
+      }
+    }
+  }
+
+  & .select__header {
+    border: 1px solid $outline;
+  }
+}

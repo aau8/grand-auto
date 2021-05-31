@@ -42,10 +42,8 @@ $bg: var(--bg);
   }
 }
 
-.breadcrumbs {
-  font-size: 12px;
-  color: $third;
-
+.autopark-breadcrumbs {
+  
   @media screen and (max-width: 820px) {
     padding: 64px 64px 0;
   }
@@ -61,7 +59,6 @@ $bg: var(--bg);
 
 .contacts-title {
   font-size: 48px;
-  margin: 8px 0 0 0; 
 
   @media screen and (max-width: 820px) {
     font-size: 28px;
