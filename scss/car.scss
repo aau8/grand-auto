@@ -1,0 +1,335 @@
+$main: var(--main);
+$third: var(--third);
+$second: var(--second);
+$accent: var(--accent);
+$accent-second: var(--accent-second);
+$outline: var(--outline);
+$transition: .2s;
+
+.car {
+  
+  @media screen and (max-width: 700px) {
+    margin: 32px 0 0 0;
+    padding: 0;
+    
+    & .container {
+      padding: 0;
+    }
+  }
+}
+
+.car__body {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1180px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.car__slider {
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+}
+
+.car__slider__body {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 16px 0 0;
+
+  @media screen and (max-width: 1180px) {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 700px) {
+    max-width: none;
+  }
+}
+ 
+.car__slider__main {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.car__slider__main__wrapper {
+  width: 100%;
+}
+
+.car__slider__main-slide {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 700px) {
+    border-radius: 0;
+  }
+}
+
+.car__slider__main__arrows {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.car__slider__main__arrow {
+  width: 48px;
+  height: 48px;
+  display: flex!important;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50px;
+  z-index: 1;
+  transition: .2s;
+
+  @media screen and (min-width: 768px) {
+    &:hover {
+      background: $accent-second;
+    }
+  }
+
+  & img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.car__slider__main-prev {
+  margin: 0 16px 0 0;
+}
+
+.car__slider__second {
+  height: 220px;
+  margin: 16px 0 0 0;
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+}
+
+.car__slider__second__wrapper {
+
+  & .swiper-slide {
+    width: 142px!important;
+    height: calc((100% - 8px) / 2);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}
+
+.car__slider__second-slide {
+  width: 142px;
+  height: 106px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.car__info {
+  max-width: 600px;
+  width: 100%;
+
+  @media screen and (max-width: 1180px) {
+    max-width: none;
+  }
+}
+
+.car__rent {
+  background: #fff;
+  border-radius: 8px;
+  transition: .2s;
+
+  @media screen and (min-width: 768px) {
+    &:hover {
+      box-shadow: 0px 8px 32px rgba(26, 109, 186, 0.08);
+    }
+  }
+}
+
+.car__rent__body {
+  padding: 40px 32px;
+}
+
+.car__rent-title {
+  font-size: 48px;
+  margin: 8px 0 0 0;
+}
+
+.car__rent__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $outline;
+  margin: 16px 0 0 0;
+  padding: 0 0 32px 0;
+  
+  & span {
+    font-size: 14px;
+    color: $second;
+  }
+}
+
+.car__rent__form {
+  margin: 32px 0 0 0;
+} 
+
+.car__rent__select {
+  width: 40%;
+
+  &:first-child {
+    width: 100%;
+  }
+
+  &:nth-child(2) {
+    margin: 0 32px 0 0;
+  }
+}
+
+.car__rent__inputs {
+  border-bottom: 1px solid $outline;
+  padding: 0 0 32px 0;
+}
+
+.car__rent__checkboxes {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 32px;
+  row-gap: 32px;
+  border-bottom: 1px solid $outline;
+  padding: 0 0 32px 0;
+
+  & .modal-callback__checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  
+
+  & label {
+    width: auto;
+
+    &::before {
+      margin: 0 14px 0 0;
+    }
+
+    &::after {
+      top: 16px;
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+}
+
+.car__rent__checkbox-title {
+  font-size: 16px;
+  // margin: 0 0 0 24px;
+
+  & strong {
+    display: block;
+    font-weight: 600;
+  }
+}
+
+@import 'blocks/_price-acc';
+
+.car__acc {
+  background: #fff;
+  border-radius: 8px;
+  margin: 32px 0 0 0;
+  padding: 32px;
+  transition: .2s;
+
+  @media screen and (min-width: 768px) {
+    &:hover {
+      box-shadow: 0px 8px 32px rgba(26, 109, 186, 0.08);
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    margin: 0;
+  }
+}
+
+.car__acc__body {
+
+  & table {
+    width: 100%;
+    margin: 16px 0 0 0;
+  }
+
+  & tr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+
+    &:first-child {
+      color: $third;
+    }
+  }
+}
+
+.car__char {
+  background: #fff;
+  border-radius: 8px;
+  margin: 32px 0 0 0;
+  transition: .2s;
+
+  @media screen and (min-width: 768px) {
+    &:hover {
+      box-shadow: 0px 8px 32px rgba(26, 109, 186, 0.08);
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    margin: 0;
+  }
+}
+
+.car__char__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 12px;
+  row-gap: 12px;
+  padding: 32px;
+}
+
+.car__char-item {
+  font-size: 16px;
+  font-weight: 600;
+
+  & span {
+    display: block;
+    font-weight: 400;
+  }
+}
+
+.offer {
+
+  @media screen and (max-width: 700px) {
+    padding: 32px 0;
+  }
+}
+
+.offer-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 32px 0; 
+}
+
+@import 'blocks/_park-car';

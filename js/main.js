@@ -116,7 +116,7 @@ function selectChoose() {
 
 // reviews Swiper
 
-if (document.querySelector('.swiper')) {
+if (document.querySelector('.reviews__slider-content')) {
   const swiper = new Swiper('.swiper-container', {
     loop: true,
     slidesPerView: "auto",
@@ -290,3 +290,52 @@ if (document.querySelector('.accordion')) {
     })
   });
 }
+
+// Слайдер на странице "Об автомобиле"
+
+if (document.querySelector('.car__slider')) {
+  const carSecondSlider = new Swiper('.car__slider__second', {
+    // allowTouchMove: false,
+    slidesPerView: 8,
+    slidesPerColumn: 2,
+    spaceBetween: 8,
+    watchOverflow: true,
+    // watchSlidesVisibility: true,
+    // watchSlidesProgress: true,
+
+    navigation: {
+      nextEl: '.car__slider__main-next',
+      prevEl: '.car__slider__main-prev',
+    },
+  });
+  
+  const carMainSlider = new Swiper('.car__slider__main', {
+    effect: 'fade',
+    watchOverflow: false,
+
+    navigation: {
+      nextEl: '.car__slider__main-next',
+      prevEl: '.car__slider__main-prev',
+    },
+    thumbs: {
+      swiper: carSecondSlider,
+    },
+  });
+}
+
+// const swiper = new Swiper('.swiper-container', {
+//   loop: true,
+//   slidesPerView: "auto",
+//   centeredSlides: true,
+//   spaceBetween: 32,
+
+//   pagination: {
+//     el: '.reviews__pagination',
+//     clickable: true,
+//   },
+
+//   navigation: {
+//     nextEl: '.reviews__arrows-right',
+//     prevEl: '.reviews__arrows-left',
+//   },
+// });
