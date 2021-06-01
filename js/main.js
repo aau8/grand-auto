@@ -115,25 +115,25 @@ function selectChoose() {
 
 
 // reviews Swiper
-const swiper = new Swiper('.swiper-container', {
-  // Optional parameters
-  loop: true,
-  slidesPerView: "auto",
-  centeredSlides: true,
-  spaceBetween: 32,
 
-  // If we need pagination
-  pagination: {
-    el: '.reviews__pagination',
-    clickable: true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.reviews__arrows-right',
-    prevEl: '.reviews__arrows-left',
-  },
-});
+if (document.querySelector('.swiper')) {
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 32,
+  
+    pagination: {
+      el: '.reviews__pagination',
+      clickable: true,
+    },
+  
+    navigation: {
+      nextEl: '.reviews__arrows-right',
+      prevEl: '.reviews__arrows-left',
+    },
+  });
+}
 
 
 
@@ -174,12 +174,14 @@ function rentalSetInfo(icon,title,text) {
 
 // Закрытие модального окна в разделе "rental"
 
-const rentalModalClose = document.querySelector('.modal-condition-btn');
-
-rentalModalClose.addEventListener('click', (e) => {
-  rentalModalClose.closest('.modal-condition').classList.remove('_show');
-  body.classList.remove('_lock');
-});
+if (document.querySelector('.modal-condition')) {
+  const rentalModalClose = document.querySelector('.modal-condition-btn');
+  
+  rentalModalClose.addEventListener('click', (e) => {
+    rentalModalClose.closest('.modal-condition').classList.remove('_show');
+    body.classList.remove('_lock');
+  });
+}
 
 // Фильтр для парка авто на главной
 
@@ -229,31 +231,34 @@ function parkFilter(parkClass) {
 
 // Перенос данных в модальное окно на главном экране
 
-const mainBtn = document.querySelector('.main-btn'),
-      mainCarTitleElem = document.querySelector('.main__select-car .select-current'),
-      mainCarDayElem = document.querySelector('.main__select-day .select-current'),
-      mainCarPriceElem = document.querySelector('.main__price-all span'),
-      mainCarPriceDayElem = document.querySelector('.main__price-day span'),
-      mainCarDepositElem = document.querySelector('.main__price-deposit span');
+if (document.querySelector('.main')) {
+  const mainBtn = document.querySelector('.main-btn'),
+        mainCarTitleElem = document.querySelector('.main__select-car .select-current'),
+        mainCarDayElem = document.querySelector('.main__select-day .select-current'),
+        mainCarPriceElem = document.querySelector('.main__price-all span'),
+        mainCarPriceDayElem = document.querySelector('.main__price-day span'),
+        mainCarDepositElem = document.querySelector('.main__price-deposit span');
+  
+  mainBtn.addEventListener('click', () => {
+    mainMoveModule(); // Переносит данные с главного экрана в модальное окно
+  });
+  
+  function mainMoveModule() {
+    const carTitle = mainCarTitleElem.innerHTML,
+          carDay = mainCarDayElem.innerHTML,
+          carPrice = mainCarPriceElem.innerHTML,
+          carPriceDay = mainCarPriceDayElem.innerHTML,
+          carDeposit = mainCarDepositElem.innerHTML;
+  
+    document.querySelector('.modal-rent-info-title').innerText = carTitle;
+    document.querySelector('.modal-rent-info-day span').innerText = carDay;
+    document.querySelector('.modal-rent-info-price-day span').innerText = carPriceDay;
+    document.querySelector('.modal-rent-info-deposit span').innerText = carDeposit;
+    document.querySelector('.modal-rent-info-price span').innerText = carPrice;
+  };
+}
 
-mainBtn.addEventListener('click', () => {
-  mainMoveModule(); // Переносит данные с главного экрана в модальное окно
-});
-
-function mainMoveModule() {
-  const carTitle = mainCarTitleElem.innerHTML,
-        carDay = mainCarDayElem.innerHTML,
-        carPrice = mainCarPriceElem.innerHTML,
-        carPriceDay = mainCarPriceDayElem.innerHTML,
-        carDeposit = mainCarDepositElem.innerHTML;
-
-  document.querySelector('.modal-rent-info-title').innerText = carTitle;
-  document.querySelector('.modal-rent-info-day span').innerText = carDay;
-  document.querySelector('.modal-rent-info-price-day span').innerText = carPriceDay;
-  document.querySelector('.modal-rent-info-deposit span').innerText = carDeposit;
-  document.querySelector('.modal-rent-info-price span').innerText = carPrice;
-};
-
+// Звездный рейтинг в отзывах
 const reviewStars = document.querySelectorAll('.modal-review-star');
 
 reviewStars.forEach(star => {
@@ -261,4 +266,27 @@ reviewStars.forEach(star => {
     
     star.classList.toggle('_fill');
   });
-})
+});
+
+
+// Аккордеон на странице "Контакты"
+if (document.querySelector('.accordion')) {
+  const accHeaderElems = document.querySelectorAll('.price__faq__header');
+  
+  accHeaderElems.forEach(accHeader => {
+    
+    accHeader.addEventListener('click', () => {
+      const accParent = accHeader.closest('.price__faq__item');
+      const accBody = accHeader.nextElementSibling;
+
+      accParent.classList.toggle('_show');
+      
+      if (accParent.classList.contains('_show')) {
+        accBody.style.maxHeight = accBody.scrollHeight + 'px';
+      }
+      else {
+        accBody.style.maxHeight = 0;
+      }
+    })
+  });
+}
