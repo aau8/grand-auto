@@ -51,10 +51,16 @@
     display: inline-block;
     width: 24px;
     height: 24px;
+    transition: $transition;
 
     & img {
       width: 100%;
       height: 100%;
+    }
+    @media screen and (min-width: $minHover) {
+      &:hover {
+        transform: translate(0,-2px);
+      }
     }
   }
 }
@@ -62,6 +68,13 @@
 .info-phone {
   font-size: 18px;
   font-weight: 600;
+  transition: $transition;
+
+  @media screen and (min-width: $minHover) {
+    &:hover {
+      color: $accent;
+    }
+  }
 }
 
 .info__callback {

@@ -88,7 +88,7 @@
                         <span class="info__item-text">Подача автомобиля 24/7 </span>
                       </div>
                     </div>
-                    <button class="btn-outline btn-round nav-menu-callback">
+                    <button class="btn-outline btn-round nav-menu-callback modal-open" data-modal-open="callback">
                       <div class="info__callback-img">
                         <img src="img/callback.svg" alt="Обратный звонок">
                       </div>
@@ -146,8 +146,8 @@
               <div class="car__rent__body">
                 <div class="breadcrumbs contacts-breadcrumbs">
                   <ul class="breadcrumbs__list">
-                    <li><a href="#">Главная \</a></li>
-                    <li><a href="#">Автопарк \</a></li>
+                    <li><a href="index.html">Главная \</a></li>
+                    <li><a href="autopark.html">Автопарк \</a></li>
                     <li><a href="#">Кроссоверы \</a></li>
                   </ul>
                 </div>
@@ -217,10 +217,11 @@
                         </ul>
                       </div>
                       <div class="select main__select car__rent__select">
-                        <div class="input select__header">
-                          <span class="select-current">5</span>
-                          <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
-                          <div class="input-label select-label"><span>Сутки</span></div>
+                        <div class="main__select main__select-day">
+                          <div class="input select__header select-current-input">
+                            <input class="select-current" type="number" value="5" min="1">
+                            <div class="input-label select-label"><span class="select-label-text">Сутки</span></div>
+                          </div>
                         </div>
                         <ul class="select__body">
                           <li class="select-item">00:00</li>
@@ -327,14 +328,7 @@
               </ul>
             </div>
           </div>
-          <!-- <div class="car__acc">
-            <div class="car__acc-body">
-              <div class="car__acc__header">
-  
-              </div>
-            </div>
-          </div> -->
-          
+          <div class="car-bg-img"><img src="img/main-rock.svg" alt=""></div>
         </div>
       </div>
     </section>

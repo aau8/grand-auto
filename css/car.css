@@ -9,6 +9,7 @@
 }
 
 .car__body {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -893,4 +894,32 @@
 .modal-rent__info-text {
   font-size: 16px;
   margin: 8px 0 0 0;
+}
+
+.car-bg-img {
+  max-width: 825px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: -180px;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: -1;
+}
+
+.car-bg-img img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1020px) {
+  .car-bg-img {
+    top: -100px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .car-bg-img {
+    display: none;
+  }
 }

@@ -23,9 +23,10 @@ document.addEventListener('click', (e) => {
     const target = e.target,
           itsMenu = target == menuBody || menuBody.contains(target),
           itsBurger = target == menuOpen,
+          itsBtnCallback = target == document.querySelector('.nav-menu-callback'),
           menuIsOpen = menu.classList.contains('_show');
   
-    if (!itsMenu && !itsBurger && menuIsOpen) {
+    if (!itsMenu && !itsBurger && menuIsOpen || itsBtnCallback) {
       menu.classList.remove('_show');
       body.classList.remove('_lock');
     }

@@ -196,6 +196,16 @@
   margin: 0 0 32px 0;
 }
 
+@media screen and (max-width: 900px) {
+  .modal-filter .modal-callback__inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .modal-filter .select__header {
   border: 1px solid var(--outline);
 }
