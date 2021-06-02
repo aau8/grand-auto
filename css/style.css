@@ -182,6 +182,16 @@ section {
   transition: 0.2s;
 }
 
+@media screen and (min-width: 768px) {
+  .btn:hover {
+    background: var(--accent-second);
+  }
+}
+
+.btn:active {
+  background: #FFD979;
+}
+
 .btn-outline {
   font-size: 14px;
   font-weight: 700;
@@ -202,9 +212,8 @@ section {
 }
 
 .btn-outline:active {
-  background: -webkit-linear-gradient(353.29deg, #FFCC70 1.86%, #FFA142 118.91%);
-  background: -o-linear-gradient(353.29deg, #FFCC70 1.86%, #FFA142 118.91%);
-  background: linear-gradient(96.71deg, #FFCC70 1.86%, #FFA142 118.91%);
+  background: #FFD979;
+  border: 2px solid #FFD979;
 }
 
 .btn-round {

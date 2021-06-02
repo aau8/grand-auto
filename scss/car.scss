@@ -79,6 +79,10 @@ $transition: .2s;
   right: 32px;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 }
 
 .car__slider__main__arrow {
@@ -114,6 +118,33 @@ $transition: .2s;
 
   @media screen and (max-width: 700px) {
     display: none;
+  }
+}
+
+.car__slider__main-pagination {
+  display: none;
+
+  @media screen and (max-width: 700px) {
+    position: absolute;
+    bottom: 24px!important;
+    left: 32px!important;
+    display: block;
+    z-index: 1;
+
+    & .swiper-pagination-bullet {
+      background: #fff;
+      opacity: 1;
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    & .swiper-pagination-bullet-active {
+      background: $accent-second;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    bottom: 12px!important;
+    left: 16px!important;
   }
 }
 
@@ -160,24 +191,53 @@ $transition: .2s;
 
 .car__rent__body {
   padding: 40px 32px;
+
+  @media screen and (max-width: 500px) {
+    padding: 32px 16px;
+  }
 }
 
 .car__rent-title {
   font-size: 48px;
   margin: 8px 0 0 0;
+
+  @media screen and (max-width: 700px) {
+    font-size: 28px;
+  }
 }
 
-.car__rent__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid $outline;
-  margin: 16px 0 0 0;
-  padding: 0 0 32px 0;
+// .car__rent__header {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   border-bottom: 1px solid $outline;
+//   margin: 16px 0 0 0;
+//   padding: 0 0 32px 0;
   
-  & span {
-    font-size: 14px;
-    color: $second;
+//   & span {
+//     font-size: 14px;
+//     color: $second;
+//   }
+
+//   @media screen and (max-width: 500px) {
+//     flex-direction: column;
+//     align-items: flex-start;
+
+//     & span:not(:last-child) {
+//       margin: 0 0 6px 0;
+//     }
+//   }
+// }
+
+.car__rent__header {
+
+  @media screen and (max-width: 600px) {
+    align-items: flex-start;
+    flex-direction: column;
+
+    & .modal-rent-info__item {
+      margin: 6px 0;
+    }
   }
 }
 
@@ -192,8 +252,27 @@ $transition: .2s;
     width: 100%;
   }
 
+  &:nth-child(1) {
+
+    @media screen and (max-width: 500px) {
+      margin: 0 16px 0 0;
+    }
+  }
+
   &:nth-child(2) {
     margin: 0 32px 0 0;
+
+    @media screen and (max-width: 500px) {
+      margin: 0 16px 0 0;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    
+    & input,
+    & .select__header {
+      padding: 12px 12px 12px 12px;
+    }
   }
 }
 
@@ -237,7 +316,6 @@ $transition: .2s;
 
 .car__rent__checkbox-title {
   font-size: 16px;
-  // margin: 0 0 0 24px;
 
   & strong {
     display: block;
@@ -333,3 +411,27 @@ $transition: .2s;
 }
 
 @import 'blocks/_park-car';
+
+// Модальное окно аренды авто
+
+.modal-rent__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 32px 0;
+}
+
+.modal-rent__info__item {
+  font-size: 12px;
+  margin: 12px 6px;
+}
+
+.modal-rent__info-title {
+  color: $second;
+}
+
+.modal-rent__info-text {
+  font-size: 16px;
+  margin: 8px 0 0 0;
+}

@@ -125,6 +125,7 @@
                   <button class="car__slider__main__arrow car__slider__main-prev"><img src="img/car-slider/car-arrow-prev.svg" alt="Предыдущий"></button>
                   <button class="car__slider__main__arrow car__slider__main-next"><img src="img/car-slider/car-arrow-next.svg" alt="Следующий"></button>
                 </div>
+                <div class="car__slider__main-pagination"></div>
               </div>
               <div class="car__slider__second">
                 <div class="swiper-wrapper car__slider__second__wrapper">
@@ -151,11 +152,25 @@
                   </ul>
                 </div>
                 <h1 class="car__rent-title">VW TIGUAN 2.0 4x4</h1>
-                <div class="car__rent__header">
+                <ul class="modal-rent-info__list car__rent__header">
+                  <li class="modal-rent-info__item">
+                    <div class="modal-rent-info__item-icon"><img src="img/rent-wallet.svg" alt="Кошелек"></div>
+                    <span class="modal-rent-info__item-text modal-rent-info-price-day"><span>3 500</span> ₽ / сутки</span>
+                  </li>
+                  <li class="modal-rent-info__item">
+                    <div class="modal-rent-info__item-icon"><img src="img/renta-deposit.svg" alt="Залог"></div>
+                    <span class="modal-rent-info__item-text modal-rent-info-deposit">Залог: <span>20 000</span> ₽ </span>
+                  </li>
+                  <li class="modal-rent-info__item">
+                    <div class="modal-rent-info__item-icon"><img src="img/airplane.svg" alt="Календарь"></div>
+                    <span class="modal-rent-info__item-text modal-rent-info-day">Аэропортный сбор: <span>1 000</span> ₽</span>
+                  </li>
+                </ul>
+                <!-- <div class="car__rent__header">
                   <span class="car__rent__header-price"><span>3 500</span> ₽ / сутки</span>
                   <span class="car__rent__header-deposit">Залог: <span>20 000</span> ₽ </span>
                   <span class="car__rent__header-price">Аэропортовый сбор: <span>1 000</span> ₽ </span>
-                </div>
+                </div> -->
                 <div class="car__rent__form">
                   <form action="#" method="POST">
                     <div class="modal-callback__inputs modal-rent__inputs car__rent__inputs">
@@ -644,7 +659,7 @@
               <div class="modal-callback__inputs">
                 <div class="modal__input">
                   <input name="modal-callback-name" type="text" class="input">
-                  <label for="modal-callback-name" class="input-label">Имя</label>
+                  <label for="modal-callback-name" class="input-label">ФИО</label>
                 </div>
                 <div class="modal__input">
                   <input name="modal-callback-name" type="phone" class="input">
@@ -657,6 +672,85 @@
               </div>
               <button type="submit" class="btn btn-round modal-callback-btn">Отправить</button>
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-rent car-modal-rent" data-modal="rent">
+      <div class="modal__body">
+        <div class="modal__content">
+          <div class="modal__header">
+            <h3 class="modal-title">Аренда автомобиля</h3>
+            <button class="modal-close"></button>
+          </div>
+          <div class="modal-rent-info">
+            <div class="modal-rent-info__body">
+              <h2 class="modal-rent-info-title"></h2>
+              <ul class="modal-rent-info__list">
+                <li class="modal-rent-info__item">
+                  <div class="modal-rent-info__item-icon"><img src="img/rent-wallet.svg" alt="Кошелек"></div>
+                  <span class="modal-rent-info__item-text modal-rent-info-price-day"><span>3 500</span> ₽ / сутки</span>
+                </li>
+                <li class="modal-rent-info__item">
+                  <div class="modal-rent-info__item-icon"><img src="img/renta-deposit.svg" alt="Залог"></div>
+                  <span class="modal-rent-info__item-text modal-rent-info-deposit">Залог: <span>20 000</span> ₽ </span>
+                </li>
+                <li class="modal-rent-info__item">
+                  <div class="modal-rent-info__item-icon"><img src="img/airplane.svg" alt="Календарь"></div>
+                  <span class="modal-rent-info__item-text modal-rent-info-day">Аэропортный сбор: <span>1 000</span> ₽</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-rent-form">
+            <div class="modal-rent-form__body">
+              <form action="#" method="POST">
+                <ul class="modal-rent__info">
+                  <li class="modal-rent__info__item">
+                    <span class="modal-rent__info-title">Дата начала</span>
+                    <div class="modal-rent__info-text">14.05.2021</div>
+                  </li>
+                  <li class="modal-rent__info__item">
+                    <span class="modal-rent__info-title">Время</span>
+                    <div class="modal-rent__info-text">11:00</div>
+                  </li>
+                  <li class="modal-rent__info__item">
+                    <span class="modal-rent__info-title">Суток</span>
+                    <div class="modal-rent__info-text">5</div>
+                  </li>
+                  <li class="modal-rent__info__item">
+                    <span class="modal-rent__info-title">Дата окончания</span>
+                    <div class="modal-rent__info-text">19.05.2021</div>
+                  </li>
+                  <li class="modal-rent__info__item">
+                    <span class="modal-rent__info-title">Время</span>
+                    <div class="modal-rent__info-text">11:00</div>
+                  </li>
+                </ul>
+                <div class="modal-callback__inputs modal-rent__inputs">
+                  <div class="modal__input">
+                    <input name="modal-callback-name" type="text" class="input" required>
+                    <label for="modal-callback-name" class="input-label">ФИО</label>
+                  </div>
+                  <div class="modal__input">
+                    <input name="modal-callback-name" type="phone" class="input" required>
+                    <label for="modal-callback-name" class="input-label">Номер</label>
+                  </div>
+                </div>
+                <div class="modal__input modal-rent-textarea">
+                  <textarea name="modal-callback-name" class="input"></textarea>
+                  <label for="modal-callback-name" class="input-label">Сообщение</label>
+                </div>
+                <div class="modal-callback__checkbox">
+                  <input name="modal-callback__checkbox-input" type="checkbox" checked required>
+                  <label for="modal-callback__checkbox-input">Я ознакомлен(-а) с <a href="#"> Политикой конфиденциальности</a></label>
+                </div>
+                <div class="modal-rent__footer">
+                  <span class="modal-rent-price modal-rent-info-price"><span>70 500</span> ₽</span>
+                  <button type="submit" class="btn btn-round modal-rent-btn">Отправить</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

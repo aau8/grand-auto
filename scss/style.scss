@@ -126,6 +126,18 @@ section {
   //     // transform: translate(0,-4px);
   //   }
   // }
+
+
+  @media screen and (min-width: $minHover) {
+    &:hover {
+      background: $accent-second;
+    }
+  }
+
+  &:active {
+    background:#FFD979;
+    // background: linear-gradient(180deg, #FFD179 0%, #FFEB79 100%);
+  }
 }
 
 .btn-outline {
@@ -145,7 +157,9 @@ section {
   }
 
   &:active {
-    background: linear-gradient(96.71deg, #FFCC70 1.86%, #FFA142 118.91%);
+    // background: linear-gradient(180deg, #FFD179 0%, #FFEB79 100%);
+    background:#FFD979;
+    border: 2px solid #FFD979;
   }
 } 
 

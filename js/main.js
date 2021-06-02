@@ -312,10 +312,14 @@ if (document.querySelector('.car__slider')) {
   const carMainSlider = new Swiper('.car__slider__main', {
     effect: 'fade',
     watchOverflow: false,
+    // loop: true,
 
     navigation: {
       nextEl: '.car__slider__main-next',
       prevEl: '.car__slider__main-prev',
+    },
+    pagination: {
+      el: '.car__slider__main-pagination',
     },
     thumbs: {
       swiper: carSecondSlider,

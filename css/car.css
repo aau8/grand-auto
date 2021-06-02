@@ -99,6 +99,12 @@
           align-items: center;
 }
 
+@media screen and (max-width: 700px) {
+  .car__slider__main__arrows {
+    display: none;
+  }
+}
+
 .car__slider__main__arrow {
   width: 48px;
   height: 48px;
@@ -146,6 +152,36 @@
 @media screen and (max-width: 700px) {
   .car__slider__second {
     display: none;
+  }
+}
+
+.car__slider__main-pagination {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .car__slider__main-pagination {
+    position: absolute;
+    bottom: 24px !important;
+    left: 32px !important;
+    display: block;
+    z-index: 1;
+  }
+  .car__slider__main-pagination .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 1;
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  }
+  .car__slider__main-pagination .swiper-pagination-bullet-active {
+    background: var(--accent-second);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .car__slider__main-pagination {
+    bottom: 12px !important;
+    left: 16px !important;
   }
 }
 
@@ -199,32 +235,38 @@
   padding: 40px 32px;
 }
 
+@media screen and (max-width: 500px) {
+  .car__rent__body {
+    padding: 32px 16px;
+  }
+}
+
 .car__rent-title {
   font-size: 48px;
   margin: 8px 0 0 0;
 }
 
-.car__rent__header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 1px solid var(--outline);
-  margin: 16px 0 0 0;
-  padding: 0 0 32px 0;
+@media screen and (max-width: 700px) {
+  .car__rent-title {
+    font-size: 28px;
+  }
 }
 
-.car__rent__header span {
-  font-size: 14px;
-  color: var(--second);
+@media screen and (max-width: 600px) {
+  .car__rent__header {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .car__rent__header .modal-rent-info__item {
+    margin: 6px 0;
+  }
 }
 
 .car__rent__form {
@@ -239,8 +281,27 @@
   width: 100%;
 }
 
+@media screen and (max-width: 500px) {
+  .car__rent__select:nth-child(1) {
+    margin: 0 16px 0 0;
+  }
+}
+
 .car__rent__select:nth-child(2) {
   margin: 0 32px 0 0;
+}
+
+@media screen and (max-width: 500px) {
+  .car__rent__select:nth-child(2) {
+    margin: 0 16px 0 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .car__rent__select input,
+  .car__rent__select .select__header {
+    padding: 12px 12px 12px 12px;
+  }
 }
 
 .car__rent__inputs {
@@ -799,4 +860,37 @@
   .park__car-btn {
     padding: 12px 16px;
   }
+}
+
+.modal-rent__info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: 0 0 32px 0;
+}
+
+.modal-rent__info__item {
+  font-size: 12px;
+  margin: 12px 6px;
+}
+
+.modal-rent__info-title {
+  color: var(--second);
+}
+
+.modal-rent__info-text {
+  font-size: 16px;
+  margin: 8px 0 0 0;
 }
