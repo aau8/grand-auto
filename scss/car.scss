@@ -209,6 +209,17 @@ $transition: .2s;
 
 .car__rent__header {
 
+  & .modal-rent-info__item-icon {
+    display: none;
+  }
+
+  @media screen and (max-width: 1180px) {
+    
+    & .modal-rent-info__item-icon {
+      display: block;
+    }
+  }
+
   @media screen and (max-width: 600px) {
     align-items: flex-start;
     flex-direction: column;
@@ -301,9 +312,9 @@ $transition: .2s;
   }
 }
 
-@import 'blocks/_price-acc';
+@import 'blocks/_price-tab';
 
-.car__acc {
+.car__tab {
   background: #fff;
   border-radius: 8px;
   margin: 32px 0 0 0;
@@ -321,7 +332,7 @@ $transition: .2s;
   }
 }
 
-.car__acc__body {
+.car__tab__body {
 
   & table {
     width: 100%;
@@ -337,6 +348,17 @@ $transition: .2s;
     &:first-child {
       color: $third;
     }
+  }
+}
+
+.car__tab__body__item {
+  display: none;  
+  visibility: hidden;
+  opacity: 0;
+
+  &._show {
+    visibility: visible;
+    opacity: 1;
   }
 }
 

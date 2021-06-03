@@ -253,6 +253,16 @@
   }
 }
 
+.car__rent__header .modal-rent-info__item-icon {
+  display: none;
+}
+
+@media screen and (max-width: 1180px) {
+  .car__rent__header .modal-rent-info__item-icon {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .car__rent__header {
     -webkit-box-align: start;
@@ -363,7 +373,7 @@
   font-weight: 600;
 }
 
-.price__acc__header {
+.price__tab__header {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -375,7 +385,8 @@
           align-items: center;
 }
 
-.price__acc__header__item {
+.price__tab__header__item {
+  position: relative;
   width: 33.333%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -394,46 +405,81 @@
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 16px 0;
   border-bottom: 1px solid var(--outline);
+  padding: 16px 0;
   cursor: pointer;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
 }
 
-.price__acc__header__item._active {
-  border-bottom: 4px solid var(--accent);
+.price__tab__header__item::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--accent);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  opacity: 0;
 }
 
-.price__acc__header__item._active .price__acc__header-title {
+.price__tab__header__item:hover .price__tab__header-title {
   color: var(--main);
 }
 
-.price__acc__header-title {
+.price__tab__header__item._active::before {
+  opacity: 1;
+}
+
+.price__tab__header__item._active .price__tab__header-title {
+  color: var(--main);
+}
+
+.price__tab__header-title {
   font-size: 18px;
   font-weight: 600;
   color: var(--accent);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
 }
 
-.price__acc__header-date {
+.price__tab__header-date {
   font-size: 12px;
   color: var(--third);
   margin: 4px 0 0 0;
 }
 
-.price__acc__body {
+.price__tab__body {
+  display: none;
   margin: 24px 0 0 0;
   overflow-x: auto;
   overflow-y: hidden;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
 }
 
-.price__acc__body__item {
+.price__tab__body._show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.price__tab__body__item {
   min-width: 760px;
 }
 
-.price__acc__body__item table {
+.price__tab__body__item table {
   width: 100%;
 }
 
-.price__acc__body__item tr {
+.price__tab__body__item tr {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -451,31 +497,31 @@
   border-bottom: 1px solid var(--outline);
 }
 
-.price__acc__body__item tr td {
+.price__tab__body__item tr td {
   width: 40%;
 }
 
-.price__acc__body__item tr td:nth-child(1) {
+.price__tab__body__item tr td:nth-child(1) {
   max-width: 416px;
   width: 100%;
   font-weight: 600;
   color: var(--accent);
 }
 
-.price__acc__body__item tr td:nth-child(2),
-.price__acc__body__item tr td:nth-child(6) {
+.price__tab__body__item tr td:nth-child(2),
+.price__tab__body__item tr td:nth-child(6) {
   width: 30%;
 }
 
-.price__acc__body__item tr:nth-child(1) {
+.price__tab__body__item tr:nth-child(1) {
   color: var(--third);
 }
 
-.price__acc__body__item tr:nth-child(1) td:nth-child(1) {
+.price__tab__body__item tr:nth-child(1) td:nth-child(1) {
   color: var(--third);
 }
 
-.car__acc {
+.car__tab {
   background: #fff;
   -webkit-border-radius: 8px;
           border-radius: 8px;
@@ -487,24 +533,24 @@
 }
 
 @media screen and (min-width: 768px) {
-  .car__acc:hover {
+  .car__tab:hover {
     -webkit-box-shadow: 0px 8px 32px rgba(26, 109, 186, 0.08);
             box-shadow: 0px 8px 32px rgba(26, 109, 186, 0.08);
   }
 }
 
 @media screen and (max-width: 700px) {
-  .car__acc {
+  .car__tab {
     margin: 0;
   }
 }
 
-.car__acc__body table {
+.car__tab__body table {
   width: 100%;
   margin: 16px 0 0 0;
 }
 
-.car__acc__body tr {
+.car__tab__body tr {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -520,8 +566,19 @@
   padding: 8px 0;
 }
 
-.car__acc__body tr:first-child {
+.car__tab__body tr:first-child {
   color: var(--third);
+}
+
+.car__tab__body__item {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.car__tab__body__item._show {
+  visibility: visible;
+  opacity: 1;
 }
 
 .car__char {

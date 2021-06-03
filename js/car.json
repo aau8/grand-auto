@@ -1,0 +1,37 @@
+[
+  {
+    "car": "VW TIGUAN 2.0 4x4",
+    "price": "3500",
+    "deposit": "20000",
+    "img": "car-1.png",
+    "cover": ""
+  },
+  {
+    "car": "Skoda Octavia",
+    "price": "5000",
+    "deposit": "22000",
+    "img": "car-5.png",
+    "cover": ""
+  },
+  {
+    "car": "Hyundai Genesis 70",
+    "price": "3000",
+    "deposit": "30000",
+    "img": "car-2.png",
+    "cover": ""
+  },
+  {
+    "car": "Kia Optima 1.6 МКПП",
+    "price": "4000",
+    "deposit": "10000",
+    "img": "car-3.png",
+    "cover": ""
+  },
+  {
+    "car": "Nissan Murano",
+    "price": "5000",
+    "deposit": "20000",
+    "img": "car-4.png",
+    "cover": ""
+  }
+]

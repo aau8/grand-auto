@@ -296,13 +296,10 @@ if (document.querySelector('.accordion')) {
 
 if (document.querySelector('.car__slider')) {
   const carSecondSlider = new Swiper('.car__slider__second', {
-    // allowTouchMove: false,
     slidesPerView: 8,
     slidesPerColumn: 2,
     spaceBetween: 8,
     watchOverflow: true,
-    // watchSlidesVisibility: true,
-    // watchSlidesProgress: true,
 
     navigation: {
       nextEl: '.car__slider__main-next',
@@ -313,7 +310,6 @@ if (document.querySelector('.car__slider')) {
   const carMainSlider = new Swiper('.car__slider__main', {
     effect: 'fade',
     watchOverflow: false,
-    // loop: true,
 
     navigation: {
       nextEl: '.car__slider__main-next',
@@ -328,19 +324,102 @@ if (document.querySelector('.car__slider')) {
   });
 }
 
-// const swiper = new Swiper('.swiper-container', {
-//   loop: true,
-//   slidesPerView: "auto",
-//   centeredSlides: true,
-//   spaceBetween: 32,
+// Таб на странице "Цены и условия"
 
-//   pagination: {
-//     el: '.reviews__pagination',
-//     clickable: true,
-//   },
+if (document.querySelector('.tab-header') && document.querySelector('.tab-body')) {
+  const tabHeaders = document.querySelectorAll('.tab-header');
+  
+  tabHeaders.forEach(tabHeader => {
+    tabHeader.addEventListener('click', () => {
+      const tabHeaderData = tabHeader.dataset.season;
+      const tabBodyShow = document.querySelector('.tab-body._show')
+      const tabBody = document.querySelector(`.tab-body[data-season-body="${tabHeaderData}"]`);
+  
+      tabBodyShow.style.display = 'none';
+      tabBodyShow.classList.remove('_show');
+  
+      tabBody.style.display = 'block';
+      setTimeout(() => {
+        tabBody.classList.add('_show');
+      }, 1);
+  
+      tabHeaders.forEach(item => {
+        item.classList.remove('_active');
+      });
+      tabHeader.classList.add('_active');
+    })
+  });
+}
 
-//   navigation: {
-//     nextEl: '.reviews__arrows-right',
-//     prevEl: '.reviews__arrows-left',
-//   },
-// });
+// Модальное окно "Арендовать" на странице автомобиля
+
+if (document.querySelector('.car-modal-rent')) {
+  const btnIsOpenModal = document.querySelector('button[data-modal-open="rent"]');
+
+  btnIsOpenModal.addEventListener('click', () => {
+    setDataInModal();
+  });
+
+  function setDataInModal() {
+    // Данные с главного экрана
+    const priceDay = document.querySelector('.car-rent-info-price-day span').innerHTML,
+          deposit = document.querySelector('.car-rent-info-deposit span').innerHTML,
+          airFee = document.querySelector('.car-rent-info-airport-fee span').innerHTML,
+          dateStart = document.querySelector('.car-rent-date-start').value,
+          timeStart = document.querySelector('.car__rent-time-start').innerHTML,
+          quantityDay = document.querySelector('.car__select-quantity-day').value,
+          priceAll = document.querySelector('.car-rent-price-all span').innerHTML;
+
+    // Элементы в модальном окне, в которые будут вставляться данные
+    const priceDayModal = document.querySelector('.car-rent-modal-price-day span'),
+          depositModal = document.querySelector('.car-rent-modal-deposit span'),
+          airFeeModal = document.querySelector('.car-rent-modal-airport-fee span'),
+          dateStartModal = document.querySelector('.modal-rent__info-date-start'),
+          dateEndModal = document.querySelector('.modal-rent__info-date-end'),
+          timeStartModal = document.querySelector('.modal-rent__info-time-start'),
+          timeEndModal = document.querySelector('.modal-rent__info-time-end'),
+          quantityDayModal = document.querySelector('.modal-rent__info-days'),
+          priceAllModal = document.querySelector('.modal-rent-info-price span');
+
+    priceDayModal.innerHTML = priceDay;
+    depositModal.innerHTML = deposit;
+    airFeeModal.innerHTML = airFee;
+    timeStartModal.innerHTML = timeStart;
+    timeEndModal.innerHTML = timeStart;
+    quantityDayModal.innerHTML = quantityDay;
+    priceAllModal.innerHTML = priceAll;
+
+    // Вставляем дату старта
+    const options = {
+      year: 'numeric',
+      month: 'numeric',
+      day: 'numeric',
+      timezone: 'UTC'
+    };
+
+    dateStartModal.innerHTML = new Date(dateStart).toLocaleString('ru', options);
+
+    // Вставляем дату окончания
+    const dayStart = new Date(dateStart),
+          dateStartUTC = dayStart.getTime(),
+          dayEndMillyseconds = parseInt(quantityDay) * 8.64e+7, // кол-во миллисекунд с даты начала по даты окончания
+          dayEnd = new Date(dateStartUTC + dayEndMillyseconds).toLocaleString('ru', options);
+    
+    dateEndModal.innerHTML = dayEnd;
+  }
+}
+
+
+
+
+// Указываем дату начала автоматически на сегодня
+
+if (document.querySelector('input[type="date"]')) {
+  Date.prototype.toDateInputValue = (function() {
+    const local = new Date(this);
+    local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+    return local.toJSON().slice(0,10);
+  });
+
+  document.querySelector('input[type="date"]').value = new Date().toDateInputValue();
+}

@@ -155,27 +155,21 @@
                 <ul class="modal-rent-info__list car__rent__header">
                   <li class="modal-rent-info__item">
                     <div class="modal-rent-info__item-icon"><img src="img/rent-wallet.svg" alt="Кошелек"></div>
-                    <span class="modal-rent-info__item-text modal-rent-info-price-day"><span>3 500</span> ₽ / сутки</span>
+                    <span class="modal-rent-info__item-text car-rent-info-price-day"><span>3 500</span> ₽ / сутки</span>
                   </li>
                   <li class="modal-rent-info__item">
                     <div class="modal-rent-info__item-icon"><img src="img/renta-deposit.svg" alt="Залог"></div>
-                    <span class="modal-rent-info__item-text modal-rent-info-deposit">Залог: <span>20 000</span> ₽ </span>
+                    <span class="modal-rent-info__item-text car-rent-info-deposit">Залог: <span>20 000</span> ₽ </span>
                   </li>
                   <li class="modal-rent-info__item">
                     <div class="modal-rent-info__item-icon"><img src="img/airplane.svg" alt="Календарь"></div>
-                    <span class="modal-rent-info__item-text modal-rent-info-day">Аэропортный сбор: <span>1 000</span> ₽</span>
+                    <span class="modal-rent-info__item-text car-rent-info-airport-fee">Аэропортный сбор: <span>1 000</span> ₽</span>
                   </li>
                 </ul>
-                <!-- <div class="car__rent__header">
-                  <span class="car__rent__header-price"><span>3 500</span> ₽ / сутки</span>
-                  <span class="car__rent__header-deposit">Залог: <span>20 000</span> ₽ </span>
-                  <span class="car__rent__header-price">Аэропортовый сбор: <span>1 000</span> ₽ </span>
-                </div> -->
                 <div class="car__rent__form">
-                  <form action="#" method="POST">
                     <div class="modal-callback__inputs modal-rent__inputs car__rent__inputs">
                       <div class="modal__input car__rent__select">
-                        <input name="modal-callback-name" type="date" class="input">
+                        <input name="modal-callback-name" type="date" class="input car-rent-date-start">
                         <label for="modal-callback-name" class="input-label">Дата начала</label>
                         <span class="modal-rent__input-icon">
                           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,7 +179,7 @@
                       </div>
                       <div class="select main__select car__rent__select">
                         <div class="input select__header">
-                          <span class="select-current">11:00</span>
+                          <span class="select-current car__rent-time-start">11:00</span>
                           <span class="select-icon"><img src="img/select-arrow.svg" alt="стрелка"></span>
                           <div class="input-label select-label"><span>Время</span></div>
                         </div>
@@ -219,36 +213,10 @@
                       <div class="select main__select car__rent__select">
                         <div class="main__select main__select-day">
                           <div class="input select__header select-current-input">
-                            <input class="select-current" type="number" value="5" min="1">
+                            <input class="select-current car__select-quantity-day" type="number" value="5" min="1">
                             <div class="input-label select-label"><span class="select-label-text">Сутки</span></div>
                           </div>
                         </div>
-                        <ul class="select__body">
-                          <li class="select-item">00:00</li>
-                          <li class="select-item">01:00</li>
-                          <li class="select-item">02:00</li>
-                          <li class="select-item">03:00</li>
-                          <li class="select-item">04:00</li>
-                          <li class="select-item">05:00</li>
-                          <li class="select-item">06:00</li>
-                          <li class="select-item">07:00</li>
-                          <li class="select-item">08:00</li>
-                          <li class="select-item">09:00</li>
-                          <li class="select-item">10:00</li>
-                          <li class="select-item">11:00</li>
-                          <li class="select-item">12:00</li>
-                          <li class="select-item">13:00</li>
-                          <li class="select-item">14:00</li>
-                          <li class="select-item">15:00</li>
-                          <li class="select-item">16:00</li>
-                          <li class="select-item">17:00</li>
-                          <li class="select-item">18:00</li>
-                          <li class="select-item">19:00</li>
-                          <li class="select-item">20:00</li>
-                          <li class="select-item">21:00</li>
-                          <li class="select-item">22:00</li>
-                          <li class="select-item">23:00</li>
-                        </ul>
                       </div>
                     </div>
                     <div class="car__rent__checkboxes">
@@ -274,30 +242,29 @@
                       </div>
                     </div>
                     <div class="modal-rent__footer">
-                      <span class="modal-rent-price modal-rent-info-price"><span>10 500</span> ₽</span>
-                      <button type="submit" class="btn btn-round modal-rent-btn">Арендовать</button>
+                      <span class="modal-rent-price car-rent-price-all"><span>10 500</span> ₽</span>
+                      <button type="submit" class="btn btn-round modal-rent-btn modal-open" data-modal-open="rent">Арендовать</button>
                     </div>
-                  </form>
                 </div>
               </div>
             </div>
-            <div class="car__acc price__acc">
-              <ul class="car__acc__header price__acc__header">
-                <li class="price__acc__header__item _active">
-                  <span class="price__acc__header-title" data-season="spring">Весна</span>
-                  <span class="price__acc__header-date">01.03-31.05</span>
+            <div class="car__tab price__tab">
+              <ul class="car__tab__header price__tab__header">
+                <li class="tab-header price__tab__header__item _active" data-season="spring">
+                  <span class="price__tab__header-title" data-season="spring">Весна</span>
+                  <span class="price__tab__header-date">01.03-31.05</span>
                 </li>
-                <li class="price__acc__header__item">
-                  <span class="price__acc__header-title" data-season="summer">Лето</span>
-                  <span class="price__acc__header-date">01.06-31.08</span>
+                <li class="tab-header price__tab__header__item" data-season="summer">
+                  <span class="price__tab__header-title" data-season="summer">Лето</span>
+                  <span class="price__tab__header-date">01.06-31.08</span>
                 </li>
-                <li class="price__acc__header__item">
-                  <span class="price__acc__header-title" data-season="autumn">Осень</span>
-                  <span class="price__acc__header-date">01.09-31.11</span>
+                <li class="tab-header price__tab__header__item" data-season="autumn">
+                  <span class="price__tab__header-title" data-season="autumn">Осень</span>
+                  <span class="price__tab__header-date">01.09-31.11</span>
                 </li>
               </ul>
-              <ul class="car__acc__body">
-                <li class="car__acc__body__item">
+              <ul class="car__tab__body">
+                <li class="tab-body car__tab__body__item _show" style="display: block;" data-season-body="spring">
                   <table>
                     <tr>
                       <td>1 — 2 дня</td>
@@ -307,6 +274,38 @@
                     </tr>
                     <tr>
                       <td>2000 ₽</td>
+                      <td>1700 ₽</td>
+                      <td>1600 ₽</td>
+                      <td>50 000 ₽</td> 
+                    </tr>
+                  </table>
+                </li>
+                <li class="tab-body car__tab__body__item" data-season-body="summer">
+                  <table>
+                    <tr>
+                      <td>1 — 2 дня</td>
+                      <td>3 — 7 дней</td>
+                      <td>8 — 15 дней</td>
+                      <td>Залог</td> 
+                    </tr>
+                    <tr>
+                      <td>5555 ₽</td>
+                      <td>1700 ₽</td>
+                      <td>1600 ₽</td>
+                      <td>50 000 ₽</td> 
+                    </tr>
+                  </table>
+                </li>
+                <li class="tab-body car__tab__body__item" data-season-body="autumn">
+                  <table>
+                    <tr>
+                      <td>1 — 2 дня</td>
+                      <td>3 — 7 дней</td>
+                      <td>8 — 15 дней</td>
+                      <td>Залог</td> 
+                    </tr>
+                    <tr>
+                      <td>9999 ₽</td>
                       <td>1700 ₽</td>
                       <td>1600 ₽</td>
                       <td>50 000 ₽</td> 
@@ -683,15 +682,15 @@
               <ul class="modal-rent-info__list">
                 <li class="modal-rent-info__item">
                   <div class="modal-rent-info__item-icon"><img src="img/rent-wallet.svg" alt="Кошелек"></div>
-                  <span class="modal-rent-info__item-text modal-rent-info-price-day"><span>3 500</span> ₽ / сутки</span>
+                  <span class="modal-rent-info__item-text car-rent-modal-price-day"><span></span> ₽ / сутки</span>
                 </li>
                 <li class="modal-rent-info__item">
                   <div class="modal-rent-info__item-icon"><img src="img/renta-deposit.svg" alt="Залог"></div>
-                  <span class="modal-rent-info__item-text modal-rent-info-deposit">Залог: <span>20 000</span> ₽ </span>
+                  <span class="modal-rent-info__item-text car-rent-modal-deposit">Залог: <span></span> ₽ </span>
                 </li>
                 <li class="modal-rent-info__item">
                   <div class="modal-rent-info__item-icon"><img src="img/airplane.svg" alt="Календарь"></div>
-                  <span class="modal-rent-info__item-text modal-rent-info-day">Аэропортный сбор: <span>1 000</span> ₽</span>
+                  <span class="modal-rent-info__item-text car-rent-modal-airport-fee">Аэропортный сбор: <span></span> ₽</span>
                 </li>
               </ul>
             </div>
@@ -702,23 +701,23 @@
                 <ul class="modal-rent__info">
                   <li class="modal-rent__info__item">
                     <span class="modal-rent__info-title">Дата начала</span>
-                    <div class="modal-rent__info-text">14.05.2021</div>
+                    <div class="modal-rent__info-text modal-rent__info-date-start">-</div>
                   </li>
                   <li class="modal-rent__info__item">
                     <span class="modal-rent__info-title">Время</span>
-                    <div class="modal-rent__info-text">11:00</div>
+                    <div class="modal-rent__info-text modal-rent__info-time-start">-</div>
                   </li>
                   <li class="modal-rent__info__item">
                     <span class="modal-rent__info-title">Суток</span>
-                    <div class="modal-rent__info-text">5</div>
+                    <div class="modal-rent__info-text modal-rent__info-days">-</div>
                   </li>
                   <li class="modal-rent__info__item">
                     <span class="modal-rent__info-title">Дата окончания</span>
-                    <div class="modal-rent__info-text">19.05.2021</div>
+                    <div class="modal-rent__info-text modal-rent__info-date-end">-</div>
                   </li>
                   <li class="modal-rent__info__item">
                     <span class="modal-rent__info-title">Время</span>
-                    <div class="modal-rent__info-text">11:00</div>
+                    <div class="modal-rent__info-text modal-rent__info-time-end">-</div>
                   </li>
                 </ul>
                 <div class="modal-callback__inputs modal-rent__inputs">
@@ -740,7 +739,7 @@
                   <label for="modal-callback__checkbox-input">Я ознакомлен(-а) с <a href="#"> Политикой конфиденциальности</a></label>
                 </div>
                 <div class="modal-rent__footer">
-                  <span class="modal-rent-price modal-rent-info-price"><span>70 500</span> ₽</span>
+                  <span class="modal-rent-price modal-rent-info-price"><span></span> ₽</span>
                   <button type="submit" class="btn btn-round modal-rent-btn">Отправить</button>
                 </div>
               </form>

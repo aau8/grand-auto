@@ -1,48 +1,82 @@
 
-.price__acc__header {
+.price__tab__header {
   width: 100%;
   display: flex;
   align-items: center;
 }
 
-.price__acc__header__item {
+.price__tab__header__item {
+  position: relative;
   width: 33.333%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 16px 0;
   border-bottom: 1px solid $outline;
+  padding: 16px 0;
   cursor: pointer;
+  transition: .2s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: $accent;
+    transition: .2s;
+    opacity: 0;
+  }
+
+  &:hover {
+
+    & .price__tab__header-title {
+      color: $main;
+    }
+  }
 
   &._active {
-    border-bottom: 4px solid $accent;
 
-    & .price__acc__header-title {
+    &::before {
+      opacity: 1;
+    }
+
+    & .price__tab__header-title {
       color: $main;
     }
   }
 }
 
-.price__acc__header-title {
+.price__tab__header-title {
   font-size: 18px;
   font-weight: 600;
   color: $accent; 
+  transition: .2s;
 }
 
-.price__acc__header-date {
+.price__tab__header-date {
   font-size: 12px;
   color: $third;
   margin: 4px 0 0 0;
 }
 
-.price__acc__body {
+.price__tab__body {
+  display: none;
   margin: 24px 0 0 0;
   overflow-x: auto;
   overflow-y: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+
+  &._show {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
-.price__acc__body__item {
+.price__tab__body__item {
   min-width: 760px;
 
   & table {

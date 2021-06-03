@@ -66,7 +66,7 @@ $third: var(--third);
   }
 }
 
-@import 'blocks/_price-acc'; 
+@import 'blocks/_price-tab'; 
 
 .price__services {
   grid-template-columns: repeat(3, 1fr);
